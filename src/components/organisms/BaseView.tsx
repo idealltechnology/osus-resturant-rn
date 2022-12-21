@@ -6,10 +6,6 @@ import testStyles from '../utils/InterfaceStyles/testStyles';
 import { IBaseView } from '../utils/interfacesUI/IBaseView';
 import CHeader from './CHeader';
 
-let isLangRtl = false;
-I18nManager.allowRTL(isLangRtl);
-I18nManager.forceRTL(isLangRtl);
-
 const BaseView: FC<IBaseView> = React.forwardRef(({ children, nav, _IFooter: footer, style }, ref) => {
   return (
     <SafeAreaView>

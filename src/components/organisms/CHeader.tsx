@@ -1,7 +1,6 @@
 import React, { useEffect, useImperativeHandle, FC } from 'react';
 import { View, StyleSheet, I18nManager } from 'react-native';
 import ColorSystem from '../../configs/color/ColorSystem';
-import mrvTxtTest from '../../Utilities/mrvTxtTest';
 import CIconGenerator from '../atoms/CIconGenerator';
 import CText from '../atoms/CText';
 import { IHeader } from '../utils/interfacesUI/IHeader';

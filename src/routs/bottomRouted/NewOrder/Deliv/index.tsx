@@ -4,6 +4,7 @@ import { heightPercentageToDP } from 'react-native-responsive-screen';
 import CInputText from '../../../../components/molecules/CInputText';
 import Xml from '../../../../components/utils/svgs/Xml';
 import ColorSystem from '../../../../configs/color/ColorSystem';
+import mrvTxtTest from '../../../../utilities/mrvTxtTest';
 import FoodType from './FoodType';
 
 export default () => {
@@ -19,7 +20,7 @@ export default () => {
       />
       <FoodType
         select={(v) => {
-          // mrvTxtTest.TSTtoast(v);
+          mrvTxtTest.TSTtoast('ss');
         }}
       />
     </View>

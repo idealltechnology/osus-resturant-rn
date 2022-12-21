@@ -4,15 +4,15 @@ import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-nat
 import CText from '../../../../../components/atoms/CText';
 import styleValues from '../../../../../components/utils/InterfaceStyles/styleValues';
 import ColorSystem from '../../../../../configs/color/ColorSystem';
-import { IFoodCategory } from './intefaces/IFoodCategory';
-import { IItem } from './intefaces/IItem';
+import { IFood } from './intefaces/IFood';
+import { IFoodCategoryItem } from './intefaces/IFoodCategoryItem';
+import { IFoodItem } from './intefaces/IFoodItem';
 
-export default ({ select, food, isSelected }: IItem) => {
-  const item = (item: IFoodCategory) => {
+export default ({ select, food, isSelected }: IFoodItem) => {
+  const item = (item: IFood) => {
     return (
       <TouchableOpacity
         onPress={() => {
-          // set_seltdFloor(item);
           select(item);
         }}
         style={[
@@ -22,6 +22,7 @@ export default ({ select, food, isSelected }: IItem) => {
           },
         ]}
       >
+        <CText text={item.code} />
         <View style={defStyle.imageView}>
           <Image source={require('../../../../../assets/Images/pizza.jpg')} style={defStyle.image} />
         </View>
@@ -43,7 +44,7 @@ const defStyle = StyleSheet.create({
     textAlign: 'center',
     borderWidth: 1,
     padding: styleValues.paddin01,
-    margin: styleValues.paddin01,
+    marginVertical: styleValues.paddin01,
     borderRadius: styleValues.radius05,
     borderColor: ColorSystem.F_Gray!(5),
   },

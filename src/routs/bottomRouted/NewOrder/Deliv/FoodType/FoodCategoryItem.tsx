@@ -5,9 +5,9 @@ import CText from '../../../../../components/atoms/CText';
 import styleValues from '../../../../../components/utils/InterfaceStyles/styleValues';
 import ColorSystem from '../../../../../configs/color/ColorSystem';
 import { IFoodCategory } from './intefaces/IFoodCategory';
-import { IItem } from './intefaces/IItem';
+import { IFoodCategoryItem } from './intefaces/IFoodCategoryItem';
 
-export default ({ select, food, isSelected }: IItem) => {
+export default ({ select, food, isSelected }: IFoodCategoryItem) => {
   const item = (item: IFoodCategory) => {
     return (
       <TouchableOpacity
@@ -39,11 +39,12 @@ const defStyle = StyleSheet.create({
   },
   item: {
     flexDirection: 'row',
-    minWidth: wp(20),
+    minWidth: wp(25),
     textAlign: 'center',
     borderWidth: 1,
     padding: styleValues.paddin01,
-    margin: styleValues.paddin01,
+    paddingHorizontal: styleValues.paddin05,
+    marginEnd: styleValues.paddin01,
     borderRadius: styleValues.radius05,
     borderColor: ColorSystem.F_Gray!(5),
   },

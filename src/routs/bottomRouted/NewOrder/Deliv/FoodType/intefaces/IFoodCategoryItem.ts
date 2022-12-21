@@ -1,6 +1,6 @@
-import {IFoodCategory} from './IFoodCategory';
+import { IFoodCategory } from './IFoodCategory';
 
-export interface IItem {
+export interface IFoodCategoryItem {
   food: IFoodCategory;
   isSelected: boolean;
   select: (item: IFoodCategory) => void;
