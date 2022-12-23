@@ -1,33 +1,16 @@
 import React, { useState, useRef, useEffect, useImperativeHandle, FC } from 'react';
 import { StyleSheet } from 'react-native';
 import Modal from 'react-native-modal';
-import ColorSystem from '../../../Configs/Color/ColorSystem';
-import BaseView from '../../Components/BaseView';
-import styleValues from '../InterfaceStyles/styleValues';
-import { IModal } from '../interfacesUI/IModal';
-import CHeader from '../../Components/CHeader';
-import mrvTxtTest from '../../../Utilities/mrvTxtTest';
-import testStyles from '../InterfaceStyles/testStyles';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-import CText from './CText';
-import CLoading from './CLoading';
 
-export const CModal: FC<IModal> = React.forwardRef(({ children, form, _iHeader, fullScreen, events, backDropDontClose, style }, ref) => {
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import ColorSystem from '../../configs/color/ColorSystem';
+import styleValues from '../utils/InterfaceStyles/styleValues';
+import { IModal } from '../utils/interfacesUI/IModal';
+
+export const CModal: FC<IModal> = React.forwardRef(({ children, form, _iHeader, screenMode, events, backDropDontClose, style }, ref) => {
   const cLoadingRef = useRef<any>();
 
   const [showModal, setShowModal] = useState(false);
-  _iHeader = {
-    ..._iHeader,
-    _IHeaderDefault: {
-      ..._iHeader?._IHeaderDefault,
-      iconEndEvent: {
-        ..._iHeader?._IHeaderDefault?.iconEndEvent,
-        onPress: () => {
-          setShowModal(false);
-        },
-      },
-    },
-  };
 
   useImperativeHandle(ref, () => {
     return { setShowModal, setIsloading };
@@ -41,12 +24,13 @@ export const CModal: FC<IModal> = React.forwardRef(({ children, form, _iHeader, 
     <Modal
       onBackButtonPress={() => (events?.onBackButtonPress ? events.onBackButtonPress : setShowModal(false))}
       onBackdropPress={() => {
-        backDropDontClose || fullScreen ? null : setShowModal(false);
+        backDropDontClose || screenMode === 'fullScreen' ? null : setShowModal(false);
       }}
       isVisible={showModal}
-      style={[StyleModal.default, fullScreen ? StyleModal.fulScreen : StyleModal.normal, style]}
+      style={[defStyl.default, styleDetecter(screenMode), style]}
     >
-      <CLoading ref={cLoadingRef} />
+      {/* <CLoading ref={cLoadingRef} /> */}
+      <>{children}</>
     </Modal>
   );
 });
@@ -55,7 +39,7 @@ CModal.displayName = 'CModal';
 
 export default CModal;
 
-const StyleModal = StyleSheet.create({
+const defStyl = StyleSheet.create({
   default: {
     backgroundColor: ColorSystem.White,
 
@@ -66,5 +50,17 @@ const StyleModal = StyleSheet.create({
     marginVertical: hp(20),
     width: wp(80),
   },
+  bottom: { width: '100%', marginTop: hp(77), marginBottom: 0 },
   fulScreen: { width: '100%', height: '100%', margin: 0 },
 });
+
+function styleDetecter(params?: 'fullScreen' | 'bottom') {
+  switch (params) {
+    case 'bottom':
+      return defStyl.bottom;
+    case 'fullScreen':
+      return defStyl.fulScreen;
+    default:
+      return defStyl.normal;
+  }
+}

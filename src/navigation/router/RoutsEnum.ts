@@ -1,7 +1,9 @@
 export enum RoutsEnum {
-  NewOrder = 'New Order',
-  OrderList = 'Order List',
+  NewOrder = 'NewOrder',
+  OrderList = 'OrderList',
   Products = 'Products',
   Reservation = 'Reservation',
   Transaction = 'Transaction',
+  BottomNavRouter = 'BottomNavRouter',
+  Splash = 'Splash',
 }

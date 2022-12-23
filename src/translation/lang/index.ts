@@ -1,10 +1,10 @@
-import translationsEN from './en.json';
-import translationsAr from './ar.json';
+import Arabic from './Arabic';
+import English from './English';
 export default {
   en: {
-    translation: translationsEN,
+    translation: JSON.parse(JSON.stringify(English)),
   },
   ar: {
-    translation: translationsAr,
+    translation: JSON.parse(JSON.stringify(Arabic)),
   },
 };

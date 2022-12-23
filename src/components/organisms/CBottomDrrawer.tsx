@@ -1,16 +1,15 @@
 import React, { useState, useRef, useEffect, useImperativeHandle, FC } from 'react';
 import { FlatList, ListRenderItem, StyleSheet, View } from 'react-native';
 import Modal from 'react-native-modal';
-import ColorSystem from '../../../configs/color/ColorSystem';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import CText from '../atoms/CText';
-import { IBottomDrawer } from '../interfacesUI/IBottomDrawer';
-import { IText } from '../interfacesUI/IText';
-import mrvTxtTest from '../../../Utilities/mrvTxtTest';
-import styleValues from '../InterfaceStyles/styleValues';
 import CSeprator from '../atoms/CSeprator';
+import { IBottomDrawer } from '../utils/interfacesUI/IBottomDrawer';
+import { IText } from '../utils/interfacesUI/IText';
+import styleValues from '../utils/InterfaceStyles/styleValues';
+import ColorSystem from '../../configs/color/ColorSystem';
 
-export const CBottomDrrawer: FC<IBottomDrawer> = React.forwardRef(({ form, fullScreen, events, backDropDontClose, titlButton, isList, style }, ref) => {
+export const CBottomDrrawer: FC<IBottomDrawer> = React.forwardRef(({ form, screenMode: fullScreen, events, backDropDontClose, titlButton, isList, style }, ref) => {
   const cLoadingRef = useRef<any>();
   const [showModal, setShowModal] = useState(false);
 

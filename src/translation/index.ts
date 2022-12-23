@@ -4,6 +4,7 @@ import { initReactI18next } from 'react-i18next';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import RNRestart from 'react-native-restart';
 import resources from './lang';
+import userLanguage from './lang/userLanguage';
 
 const getDeviceLocale = (): string => {
   let locale: string;
@@ -26,7 +27,7 @@ const languageDetector: LanguageDetectorAsyncModule = {
   type: 'languageDetector' as 'languageDetector',
   async: true, // flags below detection to be async
   detect: (cb: Function): Promise<string> =>
-    AsyncStorage.getItem('user-language')
+    AsyncStorage.getItem(userLanguage)
       .then((language) => {
         console.log('transIndexLang', language);
         if (!language) {
@@ -64,7 +65,6 @@ const languageDetector: LanguageDetectorAsyncModule = {
             }, 3000);
           }
         }
-        console.log('cb(language)', cb(language));
 
         return cb(language);
       })
@@ -75,7 +75,7 @@ const languageDetector: LanguageDetectorAsyncModule = {
   init: () => {},
 
   cacheUserLanguage: (language: string) => {
-    AsyncStorage.setItem('user-language', language).catch(() => {});
+    AsyncStorage.setItem(userLanguage, language).catch(() => {});
   },
 };
 
@@ -83,7 +83,7 @@ i18n
   .use(languageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'en',
+    // fallbackLng: 'en',
     resources,
     debug: true,
     compatibilityJSON: 'v3',

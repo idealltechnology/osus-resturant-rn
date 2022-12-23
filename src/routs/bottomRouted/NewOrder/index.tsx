@@ -1,7 +1,6 @@
-// import { Box,  Center, Drawer, FormControl, Heading, Input,  Slide, Stack } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
 import React, { useEffect, FC, useState, useRef } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import Deliv from './Deliv';
 import InDel from './ResOrDel';
 import InRest from './InRest';

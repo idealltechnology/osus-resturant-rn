@@ -1,12 +1,14 @@
 import React, { FC, useImperativeHandle, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { EnumFontFamilly } from '../enums/EnumFontFamilly';
-import { EnumFontSize } from '../enums/EnumFontSize';
-import IDropdown from '../interfacesUI/IDropdown';
-import Xml from '../Svgs/Xml';
-import CText from '../atoms/CText';
+import ColorSystem from '../../configs/color/ColorSystem';
 import CIconGenerator from '../atoms/CIconGenerator';
-import { IText } from '../interfacesUI/IText';
+import CText from '../atoms/CText';
+import { EnumFontFamilly } from '../utils/enums/EnumFontFamilly';
+import { EnumFontSize } from '../utils/enums/EnumFontSize';
+import IDropdown from '../utils/interfacesUI/IDropdown';
+import { IText } from '../utils/interfacesUI/IText';
+import Xml from '../utils/svgs/Xml';
+import SelectDropdown from './dropdown';
 
 const CDropdown: FC<IDropdown> = React.forwardRef(({ title, data, event, defaultButtonText, style, search, allStyles }, ref) => {
   useImperativeHandle(ref, () => {
@@ -74,17 +76,6 @@ const CDropdown: FC<IDropdown> = React.forwardRef(({ title, data, event, default
           set_anySelected(true);
           notifSetter(null);
         }}
-        // buttonTextAfterSelection={(selectedItem, index) => {
-        //     // text represented after item is selected
-        //     // if data array is an array of objects then return selectedItem.property to render after item is selected
-        //     return selectedItem
-        // }}
-        // rowTextForSelection={(item, index) => {
-        //     // text represented for each item in dropdown
-        //     // if data array is an array of objects then return item.property to represent item in dropdown
-        //     return item
-        // }}
-
         onBlur={() => set_isOpen(false)}
         onFocus={() => set_isOpen(true)}
         renderDropdownIcon={() => {

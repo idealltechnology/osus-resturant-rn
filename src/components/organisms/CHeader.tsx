@@ -5,6 +5,8 @@ import CIconGenerator from '../atoms/CIconGenerator';
 import CText from '../atoms/CText';
 import { IHeader } from '../utils/interfacesUI/IHeader';
 import Xml from '../utils/svgs/Xml';
+import LangChanger from './langChanger';
+import { t } from 'i18next';
 
 export const CHeader: FC<IHeader> = React.forwardRef(({ nav }, ref) => {
   useImperativeHandle(ref, () => {
@@ -15,7 +17,7 @@ export const CHeader: FC<IHeader> = React.forwardRef(({ nav }, ref) => {
     let state = nav.getState();
     let index = state.index;
     let routs = state.routeNames;
-    return routs[index];
+    return t(`routs.${routs[index]}`);
   };
   useEffect(() => {
     return () => {
@@ -25,17 +27,22 @@ export const CHeader: FC<IHeader> = React.forwardRef(({ nav }, ref) => {
 
   return (
     <View style={defStyle.conttainer}>
-      {nav.canGoBack() && (
-        <CIconGenerator
-          iconName={Xml.lineArrowLeft(ColorSystem.Black!)}
-          events={{
-            onPress() {
-              nav.goBack();
-            },
-          }}
-        />
-      )}
+      <View style={defStyle.sideICons}>
+        {nav.canGoBack() && (
+          <CIconGenerator
+            iconName={Xml.lineArrowLeft(ColorSystem.Black!)}
+            events={{
+              onPress() {
+                nav.goBack();
+              },
+            }}
+          />
+        )}
+      </View>
       <CText text={routName()} style={defStyle.text} />
+      <View style={defStyle.sideICons}>
+        <LangChanger />
+      </View>
     </View>
   );
 });
@@ -44,5 +51,6 @@ export default CHeader;
 
 const defStyle = StyleSheet.create({
   conttainer: { flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row' },
-  text: { flex: 1, textAlign: 'center' },
+  text: { textAlign: 'center', flex: 13 },
+  sideICons: { flex: 1, height: '100%', alignContent: 'center', alignItems: 'center', justifyContent: 'center' },
 });
