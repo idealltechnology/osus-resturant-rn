@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, useImperativeHandle, FC } from 'react';
+import { View } from 'react-native';
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
 
 import { SvgXml } from 'react-native-svg';
@@ -10,19 +11,16 @@ export const CLogo: FC<ILogo> = React.forwardRef(({ size = 20, horizontal, style
     return {};
   });
 
-  useEffect(() => {
-    return () => {
-      //destroy
-    };
-  }, []);
-
-  return <SvgXml width={wp(size)} height={wp(size)} xml={logo} style={testStyles.tstB} />;
+  return (
+    <View style={style}>
+      <SvgXml width={wp(size) * 2.2} height={wp(size)} xml={logo} />
+    </View>
+  );
 });
 
 export default CLogo;
 
 const logo = `
-
 <svg xmlns="http://www.w3.org/2000/svg" width="65.542" height="13.263" viewBox="0 0 65.542 13.263">
   <g id="osus_logo" data-name="osus logo" transform="translate(-0.04 -0.023)">
     <path id="Path_119960" data-name="Path 119960" d="M23.264,26.853a9.8,9.8,0,0,1-6.014-2.67s1.189-4.226,7.73-3.608a10.581,10.581,0,0,1,8.339,7.9,14.378,14.378,0,0,0-3.668-1.778,7.765,7.765,0,0,0-3.037-4.23,4.41,4.41,0,0,0-3.7-.4,3.617,3.617,0,0,0-2.438,3.079A14.475,14.475,0,0,0,23.081,26.6Z" transform="translate(-16.655 -20.49)" fill="#929495"/>
@@ -35,5 +33,4 @@ const logo = `
     <text id="rest" transform="translate(53.582 9.259)" fill="#fa7026" font-size="6" font-family="SegoeUIBlack, Segoe UI"><tspan x="0" y="0">rest</tspan></text>
   </g>
 </svg>
-
 `;

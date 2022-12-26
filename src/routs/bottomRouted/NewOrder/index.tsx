@@ -11,7 +11,7 @@ export default () => {
   useEffect(() => {}, [isInrest]);
 
   return (
-    <BaseView nav={useNavigation()} style={defStyle.baseView}>
+    <BaseView header={{ navigation: useNavigation() }} style={defStyle.baseView}>
       <InDel press={set_isInret} />
       {isInrest ? <InRest /> : <Deliv />}
     </BaseView>

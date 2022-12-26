@@ -33,7 +33,7 @@ export const CButton: FC<IButton> = React.forwardRef(({ iText, iIconSvg, iButton
         {
           flexDirection: 'row',
           padding: styleValues.paddin03,
-          borderRadius: styleValues.paddin01,
+          borderRadius: styleValues.paddin02,
           // width: '100%',
           backgroundColor: iButtonContainer?.fill ? iButtonContainer?.color + (iButtonContainer?.disabled ? '70' : '') : ColorSystem.White,
           alignItems: 'center',
@@ -47,14 +47,12 @@ export const CButton: FC<IButton> = React.forwardRef(({ iText, iIconSvg, iButton
       <CText
         {...iText}
         style={[
-          iText.color
-            ? {}
-            : {
-                color: !iButtonContainer?.fill ? iButtonContainer?.color : ColorSystem.White,
-                flex: 1,
-                textAlign: 'center',
-                textAlignVertical: 'center',
-              },
+          {
+            color: !iButtonContainer?.fill ? iButtonContainer?.color : ColorSystem.White,
+            flex: 1,
+            textAlign: 'center',
+            textAlignVertical: 'center',
+          },
           iText?.style,
         ]}
       />

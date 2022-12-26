@@ -69,7 +69,7 @@ const StyleModal = StyleSheet.create({
     textAlign: 'center',
     padding: styleValues.paddin02,
     borderBottomWidth: 1,
-    borderBottomColor: ColorSystem.F_Gray!(30),
+    borderBottomColor: ColorSystem.gray!(30),
   },
   flatListItemStyle: {
     padding: styleValues.paddin01,

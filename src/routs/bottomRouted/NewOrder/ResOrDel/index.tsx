@@ -2,7 +2,7 @@ import React, { useEffect, FC, useState, useRef } from 'react';
 import { StyleSheet, View } from 'react-native';
 import Btn from './Btn';
 import Arabic from '../../../../translation/lang/Arabic';
-import t, { labels } from '../../../../translation/lang/interface/ILangValuesEnum';
+import t, { labels, routs } from '../../../../translation/lang/interface/ILangValuesEnum';
 import mrvTxtTest from '../../../../utilities/mrvTxtTest';
 
 export default ({ press }: { press: (isIn: boolean) => void }) => {
@@ -11,7 +11,7 @@ export default ({ press }: { press: (isIn: boolean) => void }) => {
   return (
     <View style={defStyle.baseView}>
       <Btn
-        text={t(labels, labels.inResturent)}
+        text={t(labels.inResturent)}
         press={() => {
           press(true);
           set_isInrest(true);
@@ -19,7 +19,7 @@ export default ({ press }: { press: (isIn: boolean) => void }) => {
         selected={isInrest}
       />
       <Btn
-        text={t(labels, labels.delivery)}
+        text={t(routs.NewOrder)}
         press={() => {
           press(false);
           set_isInrest(false);

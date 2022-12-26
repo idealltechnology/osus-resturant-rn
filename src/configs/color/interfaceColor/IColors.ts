@@ -1,9 +1,7 @@
-import { IBaseColor } from "./IBaseColor";
-
+import { IBaseColor } from './IBaseColor';
 
 export interface IColors extends IBaseColor {
-    
-    Black   ?: string;
-    White   ?: string;
-    F_Gray  ?: (percent: 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60 | 65 | 70 | 75 | 80 | 85 | 90 | 95) => string
+  Black?: string;
+  White?: string;
+  gray?: (percent: 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60 | 65 | 70 | 75 | 80 | 85 | 90 | 95) => string;
 }

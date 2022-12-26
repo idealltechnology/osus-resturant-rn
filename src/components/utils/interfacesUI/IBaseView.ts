@@ -1,10 +1,10 @@
 import { Node } from '@babel/core';
 import { StyleProp, ViewStyle } from 'react-native';
+import { IHeader } from './IHeader';
 
 export interface IBaseView {
-  nav: any;
   style?: StyleProp<ViewStyle>;
   children: Node[] | Node;
-  // _iHeader?: IHeader | null;
+  header?: IHeader;
   _IFooter?: boolean;
 }

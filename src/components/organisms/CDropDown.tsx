@@ -59,8 +59,8 @@ const CDropdown: FC<IDropdown> = React.forwardRef(({ title, data, event, default
       {title && <CText {...title} />}
       <SelectDropdown
         defaultButtonText={defaultButtonText ? defaultButtonText : 'لطفا انتخاب کنید'}
-        buttonStyle={[DropDownStyles.buttonStyle, { borderBottomColor: notif ? notifColor : ColorSystem.F_Gray!(30) }, allStyles?.buttonStyle]}
-        buttonTextStyle={[DropDownStyles.buttonTextStyle, allStyles?.buttonTextStyle, { color: anySelected ? ColorSystem.F_Gray!(80) : ColorSystem.F_Gray!(30) }]}
+        buttonStyle={[DropDownStyles.buttonStyle, { borderBottomColor: notif ? notifColor : ColorSystem.gray!(30) }, allStyles?.buttonStyle]}
+        buttonTextStyle={[DropDownStyles.buttonTextStyle, allStyles?.buttonTextStyle, { color: anySelected ? ColorSystem.gray!(80) : ColorSystem.gray!(30) }]}
         rowStyle={[DropDownStyles.rowStyle, allStyles?.rowStyle]}
         rowTextStyle={[DropDownStyles.rowTextStyle, allStyles?.rowTextStyle]}
         dropdownStyle={[DropDownStyles.dropdownStyle, allStyles?.dropdownStyle]}
@@ -79,7 +79,7 @@ const CDropdown: FC<IDropdown> = React.forwardRef(({ title, data, event, default
         onBlur={() => set_isOpen(false)}
         onFocus={() => set_isOpen(true)}
         renderDropdownIcon={() => {
-          return <CIconGenerator iconName={isOpen ? Xml.upOneArrow(ColorSystem.F_Gray!(50)) : Xml.downArrow(ColorSystem.F_Gray!(50))} size={3} />;
+          return <CIconGenerator iconName={isOpen ? Xml.upOneArrow(ColorSystem.gray!(50)) : Xml.downArrow(ColorSystem.gray!(50))} size={3} />;
         }}
       />
     </View>
@@ -88,7 +88,7 @@ const CDropdown: FC<IDropdown> = React.forwardRef(({ title, data, event, default
 
 const DropDownStyles = StyleSheet.create({
   ModalDropdownContainer: { width: '100%', flexDirection: 'column', justifyContent: 'flex-end' },
-  buttonStyle: { width: '100%', borderBottomWidth: 1, borderBottomColor: ColorSystem.F_Gray!(30) },
+  buttonStyle: { width: '100%', borderBottomWidth: 1, borderBottomColor: ColorSystem.gray!(30) },
   buttonTextStyle: { fontFamily: EnumFontFamilly.regularYekan, height: '100%', fontSize: EnumFontSize.h5, textAlign: 'left' },
   rowStyle: { borderBottomColor: ColorSystem.White },
   rowTextStyle: { fontFamily: EnumFontFamilly.regularYekan },

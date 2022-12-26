@@ -10,7 +10,7 @@ export default ({ selected, text, press }: InterFace) => {
       iText={{
         text: text,
         bold: true,
-        color: selected ? ColorSystem.White : ColorSystem.F_Gray!(70),
+        color: selected ? ColorSystem.White : ColorSystem.gray!(70),
       }}
       iButtonContainer={{
         events: {
@@ -19,7 +19,7 @@ export default ({ selected, text, press }: InterFace) => {
           },
         },
         fill: true,
-        color: selected ? ColorSystem.BrandColor : ColorSystem.F_Gray!(5),
+        color: selected ? ColorSystem.BrandColor : ColorSystem.gray!(5),
         style: defStyle.baseView,
       }}
     />

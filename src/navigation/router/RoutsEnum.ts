@@ -6,4 +6,5 @@ export enum RoutsEnum {
   Transaction = 'Transaction',
   BottomNavRouter = 'BottomNavRouter',
   Splash = 'Splash',
+  Login = 'Login',
 }

@@ -13,9 +13,9 @@ export default () => {
       <CInputText
         startIcon={{
           iconName: Xml.magnifier,
-          color: ColorSystem.F_Gray!(20),
+          color: ColorSystem.gray!(20),
         }}
-        input={{ placeHoldr: { text: 'search', color: ColorSystem.F_Gray!(20) } }}
+        input={{ placeHoldr: { text: 'search', color: ColorSystem.gray!(20) } }}
         style={defStyle.input}
       />
       <FoodType

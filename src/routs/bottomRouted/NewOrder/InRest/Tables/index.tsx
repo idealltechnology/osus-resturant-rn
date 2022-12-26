@@ -52,6 +52,6 @@ const defStyle = StyleSheet.create({
     borderWidth: 1,
     margin: styleValues.paddin01,
     borderRadius: styleValues.radius03,
-    borderColor: ColorSystem.F_Gray!(5),
+    borderColor: ColorSystem.gray!(5),
   },
 });

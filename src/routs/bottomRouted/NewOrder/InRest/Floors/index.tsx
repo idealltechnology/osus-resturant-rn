@@ -20,7 +20,7 @@ export default ({ select }: { select: (item: IFloor) => void }) => {
           color: isSelected ? ColorSystem.BrandColor : ColorSystem.Black,
         }}
         iButtonContainer={{
-          color: isSelected ? ColorSystem.BrandColorDim : ColorSystem.F_Gray!(5),
+          color: isSelected ? ColorSystem.BrandColorDim : ColorSystem.gray!(5),
           style: defStyle.item,
           fill: true,
           events: {

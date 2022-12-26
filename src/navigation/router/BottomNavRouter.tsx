@@ -46,7 +46,7 @@ function MyTabs() {
           return <CIconGenerator iconName={iconName(color)} />;
         },
         tabBarActiveTintColor: ColorSystem.BrandColor,
-        tabBarInactiveTintColor: ColorSystem.F_Gray!(50),
+        tabBarInactiveTintColor: ColorSystem.gray!(50),
         headerShown: false,
       })}
     >

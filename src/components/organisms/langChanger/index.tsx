@@ -28,7 +28,7 @@ const LangChanger: FC = React.forwardRef(() => {
     return (
       <CText
         text={item.name}
-        style={[defStyle.item, isSel && { backgroundColor: ColorSystem.F_Gray!(10) }]}
+        style={[defStyle.item, isSel && { backgroundColor: ColorSystem.gray!(10) }]}
         events={{
           onPress() {
             if (isSel) {
@@ -59,7 +59,7 @@ const LangChanger: FC = React.forwardRef(() => {
             modalRef.current.setShowModal(true);
           },
         }}
-        iconName={Xml.orderList()}
+        iconName={Xml.lang()}
       />
       <CModal screenMode="bottom" ref={modalRef}>
         <View style={defStyle.flatList}>
@@ -71,7 +71,7 @@ const LangChanger: FC = React.forwardRef(() => {
 });
 export default LangChanger;
 const defStyle = StyleSheet.create({
-  container: { height: '100%', justifyContent: 'center' },
+  container: { justifyContent: 'center' },
   flatList: {},
   item: { textAlign: 'center', textAlignVertical: 'center', padding: styleValues.paddin04, fontSize: EnumFontSize.h2, fontWeight: 'bold' },
 });

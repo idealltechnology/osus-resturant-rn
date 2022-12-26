@@ -1,8 +1,9 @@
 import React from 'react';
-import { RoutsEnum } from './RoutsEnum';
 import { createStackNavigator } from '@react-navigation/stack';
 import BottomNavRouter from './BottomNavRouter';
-import Splash from '../../routs/Splash';
+import Splash from '../../routs/start/Splash';
+import Login from '../../routs/start/Login';
+import { RoutsEnum } from './RoutsEnum';
 
 const Stack = createStackNavigator();
 
@@ -13,7 +14,8 @@ const AppNavigator = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name={'Splash'} component={Splash} />
+      <Stack.Screen name={RoutsEnum.Splash} component={Splash} />
+      <Stack.Screen name={RoutsEnum.Login} component={Login} />
       <Stack.Screen name={'BottomNavRouter'} component={BottomNavRouter} />
     </Stack.Navigator>
   );

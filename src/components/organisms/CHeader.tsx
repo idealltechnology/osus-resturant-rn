@@ -7,17 +7,19 @@ import { IHeader } from '../utils/interfacesUI/IHeader';
 import Xml from '../utils/svgs/Xml';
 import LangChanger from './langChanger';
 import { t } from 'i18next';
+import mrvTxtTest from '../../utilities/mrvTxtTest';
 
-export const CHeader: FC<IHeader> = React.forwardRef(({ nav }, ref) => {
+export const CHeader: FC<IHeader> = React.forwardRef(({ navigation, noTitle }, ref) => {
   useImperativeHandle(ref, () => {
     return {};
   });
 
   const routName = () => {
-    let state = nav.getState();
+    let state = navigation.getState();
     let index = state.index;
-    let routs = state.routeNames;
-    return t(`routs.${routs[index]}`);
+    let routs = state.routes;
+
+    return t(`routs.${routs[index].name}`);
   };
   useEffect(() => {
     return () => {
@@ -28,18 +30,19 @@ export const CHeader: FC<IHeader> = React.forwardRef(({ nav }, ref) => {
   return (
     <View style={defStyle.conttainer}>
       <View style={defStyle.sideICons}>
-        {nav.canGoBack() && (
+        {navigation.canGoBack() && (
           <CIconGenerator
             iconName={Xml.lineArrowLeft(ColorSystem.Black!)}
             events={{
               onPress() {
-                nav.goBack();
+                navigation.goBack();
               },
             }}
           />
         )}
       </View>
-      <CText text={routName()} style={defStyle.text} />
+
+      <View style={defStyle.textConttainer}>{!noTitle && <CText text={routName()} style={defStyle.text} />}</View>
       <View style={defStyle.sideICons}>
         <LangChanger />
       </View>
@@ -51,6 +54,7 @@ export default CHeader;
 
 const defStyle = StyleSheet.create({
   conttainer: { flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row' },
-  text: { textAlign: 'center', flex: 13 },
+  textConttainer: { flex: 13, justifyContent: 'center' },
+  text: { textAlign: 'center' },
   sideICons: { flex: 1, height: '100%', alignContent: 'center', alignItems: 'center', justifyContent: 'center' },
 });

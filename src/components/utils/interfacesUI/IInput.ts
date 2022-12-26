@@ -9,7 +9,7 @@ export interface IInput extends IStyle<TextStyle> {
   borderColor?: string;
   value?: string;
   placeHoldr?: { text: string; color?: string };
-  keyboardType?: KeyboardTypeOptions | undefined | 'mobile';
+  keyboardType?: KeyboardTypeOptions | undefined | 'mobile' | 'pass';
   textAlign?: 'left' | 'center' | 'right' | undefined;
   textAlignVertical?: 'auto' | 'top' | 'bottom' | 'center' | undefined;
   variant?: 'outline' | 'underlined' | 'rounded' | 'filled' | 'unstyled';

@@ -1,9 +1,13 @@
 import { t } from 'i18next';
-import mrvTxtTest from '../../../utilities/mrvTxtTest';
 export enum labels {
   name = 'labels',
   inResturent = 'inResturent',
   delivery = 'delivery',
+  HelloAgain = 'HelloAgain',
+  loginGuid = 'loginGuid',
+  userName = 'userName',
+  password = 'password',
+  enterYour = 'enterYour',
 }
 
 export enum routs {
@@ -13,9 +17,21 @@ export enum routs {
   Products = 'Products',
   Reservation = 'Reservation',
   Transaction = 'Transaction',
+  Login = 'Login',
 }
 
-export default (name: any, label: string) => {
-  return t(`${name.name}.${label}`);
+const mt = (label: string) => {
+  var enumS = [labels, routs];
+  var name = '';
+  enumS.forEach((element) => {
+    Object.keys(element).forEach((k) => {
+      if (k === label) {
+        name = element.name;
+        return;
+      }
+    });
+  });
+
+  return t(`${name}.${label}`);
 };
-// 'object';
+export default mt;

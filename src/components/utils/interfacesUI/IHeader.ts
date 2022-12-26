@@ -1,3 +1,4 @@
 export interface IHeader {
-  nav: any;
+  navigation: any;
+  noTitle?: boolean;
 }

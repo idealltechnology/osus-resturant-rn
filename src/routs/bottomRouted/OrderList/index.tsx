@@ -9,7 +9,7 @@ export default () => {
   useEffect(() => {}, [isInrest]);
 
   return (
-    <BaseView nav={useNavigation()} style={defStyle.baseView}>
+    <BaseView header={{ navigation: useNavigation() }} style={defStyle.baseView}>
       <></>
     </BaseView>
   );

@@ -7,7 +7,7 @@ import ColorSystem from '../../configs/color/ColorSystem';
 import { EnumFontFamilly } from '../utils/enums/EnumFontFamilly';
 import { EnumFontSize } from '../utils/enums/EnumFontSize';
 
-export const CText: FC<IText> = React.forwardRef(({ text, color, events, style, disabled, bold }, ref) => {
+export const CText: FC<IText> = React.forwardRef(({ text, events, style, disabled, bold }, ref) => {
   const [isLoading, setIsloading] = useState(false);
 
   useImperativeHandle(ref, () => {
@@ -25,10 +25,7 @@ export const CText: FC<IText> = React.forwardRef(({ text, color, events, style, 
   };
 
   return (
-    <Text
-      onPress={events && events.onPress && events!.onPress}
-      style={[defaultStyle.txtStyle, bold && { fontWeight: 'bold' }, { color: color }, disabled && { color: ColorSystem.F_Gray!(35) }, style]}
-    >
+    <Text onPress={events && events.onPress && events!.onPress} style={[defaultStyle.txtStyle, bold && { fontWeight: 'bold' }, disabled && { color: ColorSystem.gray!(35) }, style]}>
       {_text()}
       {isLoading && <Spinner color={ColorSystem.White} />}
     </Text>
@@ -40,7 +37,7 @@ const defaultStyle = StyleSheet.create({
   txtStyle: {
     fontFamily: EnumFontFamilly.regularYekan,
     fontSize: EnumFontSize.h5,
-    color: ColorSystem.F_Gray!(90),
+    color: ColorSystem.gray!(50),
     height: 'auto',
     textAlignVertical: 'center',
   },

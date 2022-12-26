@@ -26,8 +26,8 @@ export const CTextStared: FC<ITextStared> = React.forwardRef(({ text, events, st
   };
 
   return (
-    <View style={defaultStyle.container}>
-      <Text onPress={events && events.onPress && events!.onPress} style={[defaultStyle.txtStyle, style]}>
+    <View style={[defaultStyle.container, style]}>
+      <Text onPress={events && events.onPress && events!.onPress} style={[defaultStyle.txtStyle]}>
         {_text()}
         {isLoading && <Spinner color={ColorSystem.White} />}
       </Text>
@@ -44,7 +44,7 @@ const defaultStyle = StyleSheet.create({
     fontSize: EnumFontSize.h5,
     // textAlign: 'center',
     // width: '100%',
-    color: ColorSystem.F_Gray!(90),
+    color: ColorSystem.gray!(90),
     height: 'auto',
     textAlignVertical: 'center',
   },

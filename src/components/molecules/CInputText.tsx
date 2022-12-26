@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useImperativeHandle, FC, Ref } from 'react';
-import { View, TouchableOpacity, TextInput } from 'react-native';
+import { View, TouchableOpacity, TextInput, StyleSheet } from 'react-native';
 import ColorSystem from '../../configs/color/ColorSystem';
 import TextHelper from '../../utilities/TextHelper';
 import CIconGenerator from '../atoms/CIconGenerator';
@@ -49,41 +49,28 @@ export const CInputText: FC<IInputText> = React.forwardRef(({ requier, startIcon
     return e;
   }
 
-  return (
-    <TouchableOpacity
-      disabled={input?.editable || input?.editable === undefined}
-      onPress={input.events?.onPress}
-      style={[
-        //   testStyles.tstG,
-        {
-          flexDirection: 'row',
-          width: '100%',
-          alignSelf: 'center',
-          borderWidth: 1,
-          borderColor: ColorSystem.F_Gray!(20),
-          borderRadius: styleValues.radius03,
-          paddingHorizontal: styleValues.paddin02,
-        },
-        style,
-      ]}
-    >
-      {title && <CTextStared {...title} />}
+  const keyboardType = () => {
+    switch (input.keyboardType) {
+      case 'mobile':
+        return 'phone-pad';
+      case 'pass':
+        return 'default';
 
-      <View
-        style={[
-          {
-            width: '100%',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-          },
-        ]}
-      >
-        {startIcon && <CIconGenerator iconName={startIcon!.iconName(notif ? notifColor! : startIcon.color!)} size={startIcon!.size} style={[{ marginEnd: styleValues.paddin01 }]} />}
+      default:
+        input.keyboardType;
+    }
+  };
+
+  return (
+    <TouchableOpacity disabled={input?.editable || input?.editable === undefined} onPress={input.events?.onPress}>
+      {title && <CTextStared {...title} style={defStyl.title} />}
+
+      <View style={defStyl.inputContainer}>
+        {startIcon && <CIconGenerator style={defStyl.icons} iconName={startIcon!.iconName(notif ? notifColor! : startIcon.color!)} size={startIcon!.size} />}
         <TextInput
           editable={input?.editable}
-          value={value}
-          keyboardType={input?.keyboardType === 'mobile' ? 'phone-pad' : input?.keyboardType}
+          value={input.keyboardType === 'pass' ? ''.padEnd(value.length, '*') : value}
+          keyboardType={keyboardType()}
           onChangeText={(e) => {
             input?.events?.onChangeText && input?.events?.onChangeText(_textCorrecter(e));
             setValue(_textCorrecter(e));
@@ -98,23 +85,20 @@ export const CInputText: FC<IInputText> = React.forwardRef(({ requier, startIcon
             },
             input.style,
           ]}
-          // borderColor={notif ? notifColor : input?.borderColor}
-          // borderColor={'rgb1(0,0,0,0.9)'}
-          // variant={input?.variant ? input?.variant : 'underlined'}
           maxLength={input.maxLength ? input.maxLength : input?.keyboardType === 'mobile' || 'phone-pad' ? 11 : 5000}
           placeholder={input?.placeHoldr?.text}
-          placeholderTextColor={input?.placeHoldr?.color ? input?.placeHoldr?.color : ColorSystem.BrandColor}
+          placeholderTextColor={input?.placeHoldr?.color ? input?.placeHoldr?.color : ColorSystem.gray!(50)}
           textAlignVertical={input?.textAlignVertical}
           textAlign={input?.textAlign}
         />
 
         {endIcon ? (
-          <CIconGenerator iconName={endIcon!.iconName(notif ? notifColor! : endIcon!.color!)} size={endIcon!.size} style={{ marginStart: styleValues.paddin01 }} />
+          <CIconGenerator events={endIcon.event} iconName={endIcon!.iconName(notif ? notifColor! : endIcon!.color!)} size={endIcon!.size} style={defStyl.icons} />
         ) : value ? (
           <CIconGenerator
+            style={defStyl.icons}
             iconName={Xml.clearInputText()}
             size={3}
-            style={{ marginStart: styleValues.paddin01 }}
             events={{
               onPress() {
                 setValue('');
@@ -132,3 +116,22 @@ export const CInputText: FC<IInputText> = React.forwardRef(({ requier, startIcon
 });
 // }
 export default CInputText;
+const defStyl = StyleSheet.create({
+  totalContainer: {},
+  inputContainer: {
+    width: '100%',
+    borderColor: ColorSystem.gray!(20),
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderRadius: styleValues.paddin02,
+    backgroundColor: ColorSystem.gray!(5),
+    justifyContent: 'center',
+  },
+  icons: {
+    marginHorizontal: styleValues.paddin02,
+  },
+  title: {
+    marginTop: styleValues.paddin04,
+    marginBottom: styleValues.paddin01,
+  },
+});

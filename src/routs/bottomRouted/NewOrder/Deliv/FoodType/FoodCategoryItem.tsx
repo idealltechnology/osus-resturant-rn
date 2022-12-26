@@ -46,7 +46,7 @@ const defStyle = StyleSheet.create({
     paddingHorizontal: styleValues.paddin05,
     marginEnd: styleValues.paddin01,
     borderRadius: styleValues.radius05,
-    borderColor: ColorSystem.F_Gray!(5),
+    borderColor: ColorSystem.gray!(5),
   },
   imageView: { flex: 1, justifyContent: 'center', alignItems: 'center' },
   image: { height: wp(5), width: wp(5) },

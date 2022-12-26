@@ -6,7 +6,7 @@ import testStyles from '../utils/InterfaceStyles/testStyles';
 import { IBaseView } from '../utils/interfacesUI/IBaseView';
 import CHeader from './CHeader';
 
-const BaseView: FC<IBaseView> = React.forwardRef(({ children, nav, _IFooter: footer, style }, ref) => {
+const BaseView: FC<IBaseView> = React.forwardRef(({ children, header, _IFooter: footer, style }, ref) => {
   return (
     <SafeAreaView>
       <View
@@ -16,12 +16,11 @@ const BaseView: FC<IBaseView> = React.forwardRef(({ children, nav, _IFooter: foo
           stl.skeleton,
         ]}
       >
-        {nav && (
+        {header && (
           <View style={stl.header}>
-            <CHeader nav={nav} />
+            <CHeader {...header} />
           </View>
         )}
-
         <View style={[stl.body, stl.skeleton, style]}>{children}</View>
       </View>
     </SafeAreaView>
