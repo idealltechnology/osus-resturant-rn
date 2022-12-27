@@ -14,5 +14,5 @@ export default () => {
 };
 
 const defStyle = StyleSheet.create({
-  baseView: { flexDirection: 'column', marginTop: styleValues.paddin01 },
+  baseView: { flexDirection: 'column' },
 });

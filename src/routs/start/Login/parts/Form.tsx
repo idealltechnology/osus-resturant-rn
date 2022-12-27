@@ -5,7 +5,7 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import CInputText from '../../../../components/molecules/CInputText';
 import ColorSystem from '../../../../configs/color/ColorSystem';
 import CButton from '../../../../components/molecules/CButton';
-import mt, { labels, routs } from '../../../../translation/lang/interface/ILangValuesEnum';
+import mt, { labels, routs } from '../../../../translation/lang/basics/ILangValuesEnum';
 import styleValues from '../../../../components/utils/InterfaceStyles/styleValues';
 import Xml from '../../../../components/utils/svgs/Xml';
 import mrvTxtTest from '../../../../utilities/mrvTxtTest';
@@ -14,6 +14,7 @@ import mrvTxtTest from '../../../../utilities/mrvTxtTest';
 
 const Form: FC = () => {
   const [showPass, set_showPass] = useState(false);
+
   useEffect(() => {
     return () => {
       //destroy
@@ -39,7 +40,7 @@ const Form: FC = () => {
           keyboardType: !showPass ? 'pass' : 'visible-password',
         }}
         endIcon={{
-          iconName: Xml.showPass,
+          iconName: showPass ? Xml.showPass : Xml.dontShowPass,
           color: ColorSystem.gray!(30),
           event: {
             onPress() {

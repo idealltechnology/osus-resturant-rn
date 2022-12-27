@@ -17,7 +17,9 @@ export default ({ select }: { select: (item: IFloor) => void }) => {
       <CButton
         iText={{
           text: item.name,
-          color: isSelected ? ColorSystem.BrandColor : ColorSystem.Black,
+          style: {
+            color: isSelected ? ColorSystem.BrandColor : ColorSystem.Black,
+          },
         }}
         iButtonContainer={{
           color: isSelected ? ColorSystem.BrandColorDim : ColorSystem.gray!(5),
@@ -43,7 +45,7 @@ export default ({ select }: { select: (item: IFloor) => void }) => {
 const defStyle = StyleSheet.create({
   baseView: {
     marginTop: styleValues.paddin03,
-    marginHorizontal: styleValues.paddin05,
+    marginHorizontal: styleValues.paddin03,
   },
   item: { minWidth: wp(25), marginHorizontal: styleValues.paddin01 },
 });

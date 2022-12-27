@@ -9,7 +9,7 @@ import { ILogo } from '../../../components/utils/interfacesUI/ILogo';
 import { RoutsEnum } from '../../../navigation/router/RoutsEnum';
 import i18n from 'i18next';
 import mrvTxtTest from '../../../utilities/mrvTxtTest';
-import userLanguage from '../../../translation/lang/userLanguage';
+import userLanguage from '../../../translation/lang/basics/userLanguage';
 import { ISplashProps } from './ISplashProps';
 import testStyles from '../../../components/utils/InterfaceStyles/testStyles';
 

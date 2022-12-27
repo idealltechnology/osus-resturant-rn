@@ -1,9 +1,9 @@
 import React, { useEffect, FC, useState, useRef } from 'react';
 import { StyleSheet, View } from 'react-native';
 import Btn from './Btn';
-import Arabic from '../../../../translation/lang/Arabic';
-import t, { labels, routs } from '../../../../translation/lang/interface/ILangValuesEnum';
+import t, { labels, routs } from '../../../../translation/lang/basics/ILangValuesEnum';
 import mrvTxtTest from '../../../../utilities/mrvTxtTest';
+import styleValues from '../../../../components/utils/InterfaceStyles/styleValues';
 
 export default ({ press }: { press: (isIn: boolean) => void }) => {
   // mrvTxtTest.copyJson(`${labels.labels}.${labels.delivery}`);
@@ -31,5 +31,5 @@ export default ({ press }: { press: (isIn: boolean) => void }) => {
 };
 
 const defStyle = StyleSheet.create({
-  baseView: { flexDirection: 'row', justifyContent: 'space-between' },
+  baseView: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: styleValues.paddin05 },
 });

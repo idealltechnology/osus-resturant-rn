@@ -5,10 +5,14 @@ import Deliv from './Deliv';
 import InDel from './ResOrDel';
 import InRest from './InRest';
 import BaseView from '../../../components/organisms/BaseView';
+import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen';
+import DeviceInfo from 'react-native-device-info';
 
 export default () => {
   const [isInrest, set_isInret] = useState(false);
-  useEffect(() => {}, [isInrest]);
+  useEffect(() => {
+    console.log(DeviceInfo.getDevice(), DeviceInfo.isTablet());
+  }, [isInrest]);
 
   return (
     <BaseView header={{ navigation: useNavigation() }} style={defStyle.baseView}>

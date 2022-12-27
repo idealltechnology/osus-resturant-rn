@@ -26,7 +26,7 @@ export default ({ select, food, isSelected }: IFoodItem) => {
         <View style={defStyle.imageView}>
           <Image source={require('../../../../../assets/Images/pizza.jpg')} style={defStyle.image} />
         </View>
-        <CText text={item.name} color={!isSelected ? ColorSystem.Black : ColorSystem.White} />
+        <CText text={item.name} />
       </TouchableOpacity>
     );
   };

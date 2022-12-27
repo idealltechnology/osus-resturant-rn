@@ -55,6 +55,6 @@ export default CHeader;
 const defStyle = StyleSheet.create({
   conttainer: { flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row' },
   textConttainer: { flex: 13, justifyContent: 'center' },
-  text: { textAlign: 'center' },
+  text: { textAlign: 'center', fontWeight: 'bold' },
   sideICons: { flex: 1, height: '100%', alignContent: 'center', alignItems: 'center', justifyContent: 'center' },
 });

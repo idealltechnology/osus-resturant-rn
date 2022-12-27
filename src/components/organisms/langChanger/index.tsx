@@ -3,7 +3,7 @@ import i18next from 'i18next';
 import { View } from 'native-base';
 import React, { FC, useRef } from 'react';
 import { FlatList, I18nManager, ListRenderItem, SafeAreaView, StyleSheet } from 'react-native';
-import userLanguage from '../../../translation/lang/userLanguage';
+import userLanguage from '../../../translation/lang/basics/userLanguage';
 import CIconGenerator from '../../atoms/CIconGenerator';
 import CSeprator from '../../atoms/CSeprator';
 import CText from '../../atoms/CText';

@@ -19,6 +19,8 @@ import LangChanger from '../../../components/organisms/langChanger';
 
 export default ({ navigation }: IloginProps) => {
   useEffect(() => {
+    navigation.replace(RoutsEnum.BottomNavRouter);
+
     return () => {
       //destroy
     };

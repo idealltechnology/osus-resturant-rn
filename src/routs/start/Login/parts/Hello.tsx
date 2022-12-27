@@ -5,7 +5,7 @@ import { KeyboardAvoidingView, StyleSheet } from 'react-native';
 import CText from '../../../../components/atoms/CText';
 import { EnumFontSize } from '../../../../components/utils/enums/EnumFontSize';
 import ColorSystem from '../../../../configs/color/ColorSystem';
-import mt, { labels } from '../../../../translation/lang/interface/ILangValuesEnum';
+import mt, { labels } from '../../../../translation/lang/basics/ILangValuesEnum';
 
 //#endregion
 

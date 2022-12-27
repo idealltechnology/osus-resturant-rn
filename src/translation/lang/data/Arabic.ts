@@ -1,4 +1,4 @@
-import { ILangValues } from './interface/ILangValues';
+import { ILangValues } from '../basics/ILangValues';
 
 const Arabic: ILangValues = {
   labels: {

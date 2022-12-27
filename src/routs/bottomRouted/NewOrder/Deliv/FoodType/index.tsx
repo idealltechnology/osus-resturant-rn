@@ -59,11 +59,11 @@ export default ({ select }: { select: (item: IFoodCategory) => void }) => {
   };
 
   return (
-    <View>
+    <View style={defStyle.baseView}>
       <View style={defStyle.categories}>
         <CText text="Categories" />
       </View>
-      <View>
+      <View style={defStyle.list}>
         <FlatList
           showsHorizontalScrollIndicator={false}
           horizontal
@@ -79,9 +79,10 @@ export default ({ select }: { select: (item: IFoodCategory) => void }) => {
 
 const defStyle = StyleSheet.create({
   baseView: {
-    marginTop: styleValues.paddin03,
-    alignSelf: 'center',
+    marginTop: styleValues.paddin05,
   },
-
+  list: {
+    marginTop: styleValues.paddin03,
+  },
   categories: {},
 });

@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import RNRestart from 'react-native-restart';
 import resources from './lang';
-import userLanguage from './lang/userLanguage';
+import userLanguage from './lang/basics/userLanguage';
 
 const getDeviceLocale = (): string => {
   let locale: string;
