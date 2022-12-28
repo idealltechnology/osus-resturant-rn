@@ -7,7 +7,7 @@ import CText from '../atoms/CText';
 import CTextStared from '../atoms/CTextStared';
 import { EnumFontFamilly } from '../utils/enums/EnumFontFamilly';
 import { EnumFontSize } from '../utils/enums/EnumFontSize';
-import styleValues from '../utils/InterfaceStyles/styleValues';
+import styleValues from '../utils/enums/styleValues';
 import { IInputText } from '../utils/interfacesUI/IInputText';
 import { IText } from '../utils/interfacesUI/IText';
 import Xml from '../utils/svgs/Xml';

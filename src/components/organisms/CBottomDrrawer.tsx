@@ -6,7 +6,7 @@ import CText from '../atoms/CText';
 import CSeprator from '../atoms/CSeprator';
 import { IBottomDrawer } from '../utils/interfacesUI/IBottomDrawer';
 import { IText } from '../utils/interfacesUI/IText';
-import styleValues from '../utils/InterfaceStyles/styleValues';
+import styleValues from '../utils/enums/styleValues';
 import ColorSystem from '../../configs/color/ColorSystem';
 
 export const CBottomDrrawer: FC<IBottomDrawer> = React.forwardRef(({ form, screenMode: fullScreen, events, backDropDontClose, titlButton, isList, style }, ref) => {

@@ -11,9 +11,9 @@ import i18n from 'i18next';
 import mrvTxtTest from '../../../utilities/mrvTxtTest';
 import userLanguage from '../../../translation/lang/basics/userLanguage';
 import { ISplashProps } from './ISplashProps';
-import testStyles from '../../../components/utils/InterfaceStyles/testStyles';
 
 const Splash: FC<ISplashProps> = ({ navigation }) => {
+  // TODO
   const [siz, sizSet] = useState(100);
   const [expanded, setExpanded] = useState(false);
 

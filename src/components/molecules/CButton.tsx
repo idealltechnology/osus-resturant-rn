@@ -3,7 +3,7 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { Spinner } from 'native-base';
 import { IButton } from '../utils/interfacesUI/IButton';
-import styleValues from '../utils/InterfaceStyles/styleValues';
+import styleValues from '../utils/enums/styleValues';
 import CIconGenerator from '../atoms/CIconGenerator';
 import CText from '../atoms/CText';
 import ColorSystem from '../../configs/color/ColorSystem';

@@ -48,6 +48,7 @@ function MyTabs() {
         tabBarActiveTintColor: ColorSystem.BrandColor,
         tabBarInactiveTintColor: ColorSystem.gray!(50),
         headerShown: false,
+        tabBarLabelPosition: 'below-icon',
       })}
     >
       <Tab.Screen name={RoutsEnum.NewOrder} component={NewOrder} />

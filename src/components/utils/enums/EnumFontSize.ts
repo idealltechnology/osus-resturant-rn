@@ -1,18 +1,19 @@
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
+import resizer from './resizer';
 export enum EnumFontSize {
-    h1 = wp(8),//wp('6%') //fontSize:18
+  h1 = resizer(wp(8.0)), //fontSize:18
 
-    h2 = wp(6),//wp('4.8%') //fontSize:18
+  h2 = resizer(wp(6.0)), //fontSize:18
 
-    h3 = wp(4.5), //fontSize:16
+  h3 = resizer(wp(4.5)), //fontSize:16
 
-    h4 = wp(4), //fontSize:14
+  h4 = resizer(wp(4.0)), //fontSize:14
 
-    h5 = wp(3.5), //fontSize:12
+  h5 = resizer(wp(3.5)), //fontSize:12
 
-    h6 = wp(3), //fontSize:10
-    h7 = wp(2.5), //fontSize:10
-    h8 = wp(2), //fontSize:10
+  h6 = resizer(wp(3.0)), //fontSize:10
 
+  h7 = resizer(wp(2.5)), //fontSize:10
+
+  h8 = resizer(wp(2.0)), //fontSize:10
 }
-

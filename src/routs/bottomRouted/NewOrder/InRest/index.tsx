@@ -1,6 +1,6 @@
 import React, { useEffect, FC, useState, useRef } from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
-import styleValues from '../../../../components/utils/InterfaceStyles/styleValues';
+import styleValues from '../../../../components/utils/enums/styleValues';
 import Floors from './Floors';
 import Tables from './Tables';
 

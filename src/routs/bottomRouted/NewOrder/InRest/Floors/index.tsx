@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FlatList, ListRenderItem, StyleSheet, View } from 'react-native';
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
 import CButton from '../../../../../components/molecules/CButton';
-import styleValues from '../../../../../components/utils/InterfaceStyles/styleValues';
+import styleValues from '../../../../../components/utils/enums/styleValues';
 import ColorSystem from '../../../../../configs/color/ColorSystem';
 import { IFloor } from './IFloor';
 

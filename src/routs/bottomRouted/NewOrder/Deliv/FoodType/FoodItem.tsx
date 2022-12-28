@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FlatList, Image, ListRenderItem, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { heightPercentageToDP as hp, widthPercentageToDP as wp } from 'react-native-responsive-screen';
 import CText from '../../../../../components/atoms/CText';
-import styleValues from '../../../../../components/utils/InterfaceStyles/styleValues';
+import styleValues from '../../../../../components/utils/enums/styleValues';
 import ColorSystem from '../../../../../configs/color/ColorSystem';
 import { IFood } from './intefaces/IFood';
 import { IFoodCategoryItem } from './intefaces/IFoodCategoryItem';

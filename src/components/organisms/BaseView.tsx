@@ -1,36 +1,44 @@
 import { View } from 'native-base';
 import React, { FC } from 'react';
-import { I18nManager, SafeAreaView, StyleSheet } from 'react-native';
-import styleValues from '../utils/InterfaceStyles/styleValues';
-import testStyles from '../utils/InterfaceStyles/testStyles';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import isTablet from '../../utilities/isTablet';
+import styleValues from '../utils/enums/styleValues';
+import testStyles from '../utils/enums/testStyles';
 import { IBaseView } from '../utils/interfacesUI/IBaseView';
 import CHeader from './CHeader';
+import CNavigatonBar from './CNavigatonBar';
 
-const BaseView: FC<IBaseView> = React.forwardRef(({ children, header, _IFooter: footer, style }, ref) => {
+const BaseView: FC<IBaseView> = React.forwardRef(({ children, header, navBar, style }, ref) => {
+  const isTblt = isTablet();
+  const navigatonBar = () => (
+    <>
+      {navBar && (
+        <View style={defStyl.nav}>
+          <CNavigatonBar {...header!} />
+        </View>
+      )}
+    </>
+  );
   return (
     <SafeAreaView>
-      <View
-        style={[
-          // styles.tstR,
-          stl.container,
-          stl.skeleton,
-        ]}
-      >
+      <View style={[defStyl.container, defStyl.skeleton]}>
         {header && (
-          <View style={stl.header}>
+          <View style={defStyl.header}>
             <CHeader {...header} />
           </View>
         )}
-        <View style={[stl.body, stl.skeleton, style]}>{children}</View>
+        {isTblt && navigatonBar()}
+        <View style={[defStyl.body, defStyl.skeleton, style]}>{children}</View>
+        {!isTblt && navigatonBar()}
       </View>
     </SafeAreaView>
   );
 });
 export default BaseView;
-const stl = StyleSheet.create({
+const defStyl = StyleSheet.create({
   container: { height: '100%' },
   header: { flex: 1 },
   body: { flex: 10, padding: styleValues.paddin05 },
-  footer: { flex: 1 },
+  nav: { flex: 1 },
   skeleton: !true ? testStyles.tstB : {},
 });

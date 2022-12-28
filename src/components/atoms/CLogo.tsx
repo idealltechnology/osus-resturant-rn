@@ -3,7 +3,6 @@ import { View } from 'react-native';
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
 
 import { SvgXml } from 'react-native-svg';
-import testStyles from '../utils/InterfaceStyles/testStyles';
 import { ILogo } from '../utils/interfacesUI/ILogo';
 
 export const CLogo: FC<ILogo> = React.forwardRef(({ size = 20, horizontal, style }, ref) => {

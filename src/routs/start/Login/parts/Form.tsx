@@ -6,7 +6,7 @@ import CInputText from '../../../../components/molecules/CInputText';
 import ColorSystem from '../../../../configs/color/ColorSystem';
 import CButton from '../../../../components/molecules/CButton';
 import mt, { labels, routs } from '../../../../translation/lang/basics/ILangValuesEnum';
-import styleValues from '../../../../components/utils/InterfaceStyles/styleValues';
+import styleValues from '../../../../components/utils/enums/styleValues';
 import Xml from '../../../../components/utils/svgs/Xml';
 import mrvTxtTest from '../../../../utilities/mrvTxtTest';
 

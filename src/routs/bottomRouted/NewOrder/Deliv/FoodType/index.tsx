@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FlatList, ListRenderItem, StyleSheet, View } from 'react-native';
 import CText from '../../../../../components/atoms/CText';
-import styleValues from '../../../../../components/utils/InterfaceStyles/styleValues';
+import styleValues from '../../../../../components/utils/enums/styleValues';
 import mrvTxtTest from '../../../../../utilities/mrvTxtTest';
 import FoodCategoryItem from './FoodCategoryItem';
 import FoodItem from './FoodItem';

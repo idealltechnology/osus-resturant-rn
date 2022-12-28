@@ -12,14 +12,17 @@ import { RoutsEnum } from '../../../navigation/router/RoutsEnum';
 import CLogo from '../../../components/atoms/CLogo';
 import Hello from './parts/Hello';
 import Form from './parts/Form';
-import styleValues from '../../../components/utils/InterfaceStyles/styleValues';
+import styleValues from '../../../components/utils/enums/styleValues';
 import LangChanger from '../../../components/organisms/langChanger';
+import isTablet from '../../../utilities/isTablet';
+import testStyles from '../../../components/utils/enums/testStyles';
 
 //#endregion
 
 export default ({ navigation }: IloginProps) => {
+  // TODO
   useEffect(() => {
-    navigation.replace(RoutsEnum.BottomNavRouter);
+    // navigation.replace(RoutsEnum.NewOrder);
 
     return () => {
       //destroy
@@ -27,27 +30,36 @@ export default ({ navigation }: IloginProps) => {
   }, []);
 
   return (
-    <BaseView>
-      <CLogo size={8} />
-      <ScrollView>
-        <View style={defStyyl.mainSubView}>
-          <Hello />
-          <Form />
-          <LangChanger />
+    <BaseView style={{}}>
+      <View style={[{ flex: 1 }]}>
+        <CLogo size={8} style={[{ flex: 1 }]} />
+        <View style={{ flex: 7 }}>
+          <ScrollView>
+            <View style={[defStyl.mainSubView]}>
+              <Hello />
+              <Form />
+            </View>
+          </ScrollView>
         </View>
-      </ScrollView>
+      </View>
     </BaseView>
   );
 };
 
-const defStyyl = StyleSheet.create({
+const defStyl = StyleSheet.create({
+  container: {
+    // justifyContent: 'center',
+    // alignContent: 'center',
+    // alignItems: 'center',
+    // borderWidth: 1,
+  },
   mainSubView: {
-    flex: 1,
+    alignSelf: 'center',
     justifyContent: 'center',
-    marginHorizontal: styleValues.paddin05,
-    marginVertical: styleValues.paddin15,
     backgroundColor: ColorSystem.White,
     padding: styleValues.paddin03,
     borderRadius: styleValues.radius15,
   },
+  tablet: {},
+  mobole: {},
 });

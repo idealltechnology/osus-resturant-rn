@@ -10,12 +10,9 @@ import DeviceInfo from 'react-native-device-info';
 
 export default () => {
   const [isInrest, set_isInret] = useState(false);
-  useEffect(() => {
-    console.log(DeviceInfo.getDevice(), DeviceInfo.isTablet());
-  }, [isInrest]);
 
   return (
-    <BaseView header={{ navigation: useNavigation() }} style={defStyle.baseView}>
+    <BaseView header={{ navigation: useNavigation() }} navBar={{ navigation: useNavigation() }} style={defStyle.baseView}>
       <InDel press={set_isInret} />
       {isInrest ? <InRest /> : <Deliv />}
     </BaseView>

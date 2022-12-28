@@ -4,7 +4,7 @@ import Modal from 'react-native-modal';
 
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import ColorSystem from '../../configs/color/ColorSystem';
-import styleValues from '../utils/InterfaceStyles/styleValues';
+import styleValues from '../utils/enums/styleValues';
 import { IModal } from '../utils/interfacesUI/IModal';
 
 export const CModal: FC<IModal> = React.forwardRef(({ children, form, _iHeader, screenMode, events, backDropDontClose, style }, ref) => {

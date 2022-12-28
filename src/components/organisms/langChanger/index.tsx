@@ -8,7 +8,7 @@ import CIconGenerator from '../../atoms/CIconGenerator';
 import CSeprator from '../../atoms/CSeprator';
 import CText from '../../atoms/CText';
 import { EnumFontSize } from '../../utils/enums/EnumFontSize';
-import styleValues from '../../utils/InterfaceStyles/styleValues';
+import styleValues from '../../utils/enums/styleValues';
 import Xml from '../../utils/svgs/Xml';
 import CModal from '../CModal';
 import { ILangView } from './item/ILangView';

@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import Btn from './Btn';
 import t, { labels, routs } from '../../../../translation/lang/basics/ILangValuesEnum';
 import mrvTxtTest from '../../../../utilities/mrvTxtTest';
-import styleValues from '../../../../components/utils/InterfaceStyles/styleValues';
+import styleValues from '../../../../components/utils/enums/styleValues';
 
 export default ({ press }: { press: (isIn: boolean) => void }) => {
   // mrvTxtTest.copyJson(`${labels.labels}.${labels.delivery}`);
