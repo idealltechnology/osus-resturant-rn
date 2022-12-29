@@ -1,6 +1,6 @@
 import React, { useImperativeHandle, FC } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { IHeader } from '../../utils/interfacesUI/IHeader';
+import { IHeader } from '../CHeaader/IHeader';
 import { Iitem } from './item/Iitem';
 import list from './list';
 import Item from './item';

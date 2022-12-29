@@ -18,13 +18,13 @@ import ColorSystem from '../../../configs/color/ColorSystem';
 
 const LangChanger: FC = React.forwardRef(() => {
   const modalRef = useRef<any>();
-  var setedLang: string | undefined = '';
+  var currentLang: string | undefined = '';
   AsyncStorage.getItem(userLanguage).then((lang) => {
-    setedLang = lang?.toString();
+    currentLang = lang?.toString();
   });
 
   const foodCategoryItem: ListRenderItem<ILangView> = ({ item }) => {
-    var isSel: boolean = item.value === setedLang;
+    var isSel: boolean = item.value === currentLang;
     return (
       <CText
         text={item.name}
@@ -71,7 +71,7 @@ const LangChanger: FC = React.forwardRef(() => {
 });
 export default LangChanger;
 const defStyle = StyleSheet.create({
-  container: { justifyContent: 'center' },
+  container: { justifyContent: 'center', flexDirection: 'row' },
   flatList: {},
   item: { textAlign: 'center', textAlignVertical: 'center', padding: styleValues.paddin04, fontSize: EnumFontSize.h2, fontWeight: 'bold' },
 });

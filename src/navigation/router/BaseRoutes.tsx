@@ -5,11 +5,11 @@ import Splash from '../../routs/start/Splash';
 import Login from '../../routs/start/Login';
 import { RoutsEnum } from './RoutsEnum';
 
-import NewOrder from '../../routs/bottomRouted/NewOrder';
-import OrderList from '../../routs/bottomRouted/OrderList';
-import Products from '../../routs/bottomRouted/Products';
-import Reservation from '../../routs/bottomRouted/Reservation';
-import Transaction from '../../routs/bottomRouted/Transaction';
+import NewOrder from '../../routs/navBarRouted/NewOrder';
+import OrderList from '../../routs/navBarRouted/OrderList';
+import Products from '../../routs/navBarRouted/Products';
+import Reservation from '../../routs/navBarRouted/Reservation';
+import Transaction from '../../routs/navBarRouted/Transaction';
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {

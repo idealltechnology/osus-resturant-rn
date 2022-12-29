@@ -5,7 +5,7 @@ import isTablet from '../../utilities/isTablet';
 import styleValues from '../utils/enums/styleValues';
 import testStyles from '../utils/enums/testStyles';
 import { IBaseView } from '../utils/interfacesUI/IBaseView';
-import CHeader from './CHeader';
+import CHeader from './CHeaader';
 import CNavigatonBar from './CNavigatonBar';
 
 const BaseView: FC<IBaseView> = React.forwardRef(({ children, header, navBar, style }, ref) => {

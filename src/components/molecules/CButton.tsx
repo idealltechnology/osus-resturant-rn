@@ -33,8 +33,7 @@ export const CButton: FC<IButton> = React.forwardRef(({ iText, iIconSvg, iButton
         {
           flexDirection: 'row',
           padding: styleValues.paddin03,
-          borderRadius: styleValues.paddin02,
-          // width: '100%',
+          borderRadius: styleValues.radius05,
           backgroundColor: iButtonContainer?.fill ? iButtonContainer?.color + (iButtonContainer?.disabled ? '70' : '') : ColorSystem.White,
           alignItems: 'center',
           justifyContent: 'center',

@@ -29,7 +29,7 @@ export default React.forwardRef(
   ) => {
     let isSelected = item.navTo === current;
 
-    const color = isSelected ? ColorSystem.BrandColor : ColorSystem.gray!(50);
+    const color = isSelected ? ColorSystem.BrandColor : ColorSystem.gray!(60);
     const routName = (name: string) => {
       return t(`routs.${JSON.parse(JSON.stringify(routs))[name]}`);
     };
@@ -46,7 +46,7 @@ export default React.forwardRef(
 
     return (
       <TouchableOpacity
-        style={[defStyle.container, { flexDirection: isTablet() ? 'row' : 'column' }]}
+        style={[defStyle.container, { flexDirection: isTablet() ? 'row-reverse' : 'column' }]}
         onPress={() => {
           current === RoutsEnum.NewOrder ? navigation.navigate(item.navTo) : navigation.replace(item.navTo);
         }}

@@ -5,6 +5,7 @@ const Arabic: ILangValues = {
     inResturent: 'فی الرستوران',
     delivery: 'انتقال',
     HelloAgain: 'سلام مجدد',
+    Hello: 'سلام',
     loginGuid: '',
     userName: '',
     password: '',

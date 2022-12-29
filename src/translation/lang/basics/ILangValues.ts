@@ -3,6 +3,7 @@ export interface ILangValues {
     inResturent: string;
     delivery: string;
     HelloAgain: string;
+    Hello: string;
     loginGuid: string;
     userName: string;
     password: string;

@@ -4,6 +4,7 @@ export enum labels {
   inResturent = 'inResturent',
   delivery = 'delivery',
   HelloAgain = 'HelloAgain',
+  Hello = 'Hello',
   loginGuid = 'loginGuid',
   userName = 'userName',
   password = 'password',

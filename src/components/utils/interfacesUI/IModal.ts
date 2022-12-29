@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import { ViewProps, ViewStyle } from 'react-native';
 import { IEvent } from './IEvent';
 import { IForm } from './IForm';
-import { IHeader } from './IHeader';
+import { IHeader } from '../../organisms/CHeaader/IHeader';
 import { IStyle } from './IStyle';
 
 export interface IModal extends IStyle<ViewStyle> {

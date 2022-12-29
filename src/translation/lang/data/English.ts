@@ -1,10 +1,11 @@
-import { ILangValues } from './basics/ILangValues';
+import { ILangValues } from '../basics/ILangValues';
 
 const English: ILangValues = {
   labels: {
     inResturent: 'In Resturent',
     delivery: 'Delivery',
     HelloAgain: 'Hello Again !',
+    Hello: 'Hello',
     loginGuid: 'You can log in and password so you can access your store with ease',
     userName: 'Username',
     password: 'Password',

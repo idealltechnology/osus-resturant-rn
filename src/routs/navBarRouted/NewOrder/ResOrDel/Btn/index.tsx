@@ -10,7 +10,9 @@ export default ({ selected, text, press }: InterFace) => {
       iText={{
         text: text,
         bold: true,
-        color: selected ? ColorSystem.White : ColorSystem.gray!(70),
+        style: {
+          color: selected ? ColorSystem.White : ColorSystem.gray!(70),
+        },
       }}
       iButtonContainer={{
         events: {
@@ -27,5 +29,5 @@ export default ({ selected, text, press }: InterFace) => {
 };
 
 const defStyle = StyleSheet.create({
-  baseView: { width: '48%' },
+  baseView: { flex: 10 },
 });

@@ -1,13 +1,11 @@
 //#region ... imports
-import React, { useState, useEffect, FC, useRef } from 'react';
-import { KeyboardAvoidingView, Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import React, { useEffect } from 'react';
+import { ScrollView, StyleSheet, View } from 'react-native';
 
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { IloginProps } from './IloginProps';
 import BaseView from '../../../components/organisms/BaseView';
-import CInputText from '../../../components/molecules/CInputText';
 import ColorSystem from '../../../configs/color/ColorSystem';
-import CButton from '../../../components/molecules/CButton';
 import { RoutsEnum } from '../../../navigation/router/RoutsEnum';
 import CLogo from '../../../components/atoms/CLogo';
 import Hello from './parts/Hello';
@@ -15,7 +13,6 @@ import Form from './parts/Form';
 import styleValues from '../../../components/utils/enums/styleValues';
 import LangChanger from '../../../components/organisms/langChanger';
 import isTablet from '../../../utilities/isTablet';
-import testStyles from '../../../components/utils/enums/testStyles';
 
 //#endregion
 

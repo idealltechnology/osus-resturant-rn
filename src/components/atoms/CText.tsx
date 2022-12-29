@@ -37,7 +37,7 @@ const defaultStyle = StyleSheet.create({
   txtStyle: {
     fontFamily: EnumFontFamilly.regularYekan,
     fontSize: EnumFontSize.h5,
-    color: ColorSystem.gray!(50),
+    color: ColorSystem.Black,
     height: 'auto',
     textAlignVertical: 'center',
   },
