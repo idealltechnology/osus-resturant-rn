@@ -1,4 +1,5 @@
 //#region ... imports
+import { View } from 'native-base';
 import React, { FC } from 'react';
 import { KeyboardAvoidingView, StyleSheet } from 'react-native';
 
@@ -11,10 +12,10 @@ import mt, { labels } from '../../../../translation/lang/basics/ILangValuesEnum'
 
 const Hello: FC = () => {
   return (
-    <KeyboardAvoidingView>
+    <View>
       <CText text={mt(labels.HelloAgain)} style={[defStyyl.general, defStyyl.title]} />
       <CText text={mt(labels.loginGuid)} style={[defStyyl.general, defStyyl.desc]} />
-    </KeyboardAvoidingView>
+    </View>
   );
 };
 

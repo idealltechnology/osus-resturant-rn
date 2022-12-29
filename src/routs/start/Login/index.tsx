@@ -1,6 +1,6 @@
 //#region ... imports
 import React, { useState, useEffect, FC, useRef } from 'react';
-import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { KeyboardAvoidingView, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { IloginProps } from './IloginProps';
@@ -22,7 +22,7 @@ import testStyles from '../../../components/utils/enums/testStyles';
 export default ({ navigation }: IloginProps) => {
   // TODO
   useEffect(() => {
-    // navigation.replace(RoutsEnum.NewOrder);
+    navigation.replace(RoutsEnum.NewOrder);
 
     return () => {
       //destroy
@@ -30,15 +30,17 @@ export default ({ navigation }: IloginProps) => {
   }, []);
 
   return (
-    <BaseView style={{}}>
-      <View style={[{ flex: 1 }]}>
-        <CLogo size={8} style={[{ flex: 1 }]} />
-        <View style={{ flex: 7 }}>
-          <ScrollView>
-            <View style={[defStyl.mainSubView]}>
-              <Hello />
-              <Form />
-            </View>
+    <BaseView>
+      <View style={defStyl.header}>
+        <CLogo size={8} />
+        <LangChanger />
+      </View>
+
+      <View style={defStyl.formContainer}>
+        <View style={defStyl.ScrollOverView}>
+          <ScrollView contentContainerStyle={[defStyl.mainSubView]}>
+            <Hello />
+            <Form />
           </ScrollView>
         </View>
       </View>
@@ -47,15 +49,20 @@ export default ({ navigation }: IloginProps) => {
 };
 
 const defStyl = StyleSheet.create({
-  container: {
-    // justifyContent: 'center',
+  header: { flexDirection: 'row', justifyContent: 'space-between' },
+  formContainer: {
+    flexDirection: 'column',
+    flex: 1,
+    justifyContent: 'center',
     // alignContent: 'center',
-    // alignItems: 'center',
-    // borderWidth: 1,
+    alignItems: 'center',
   },
+  ScrollOverView: { height: isTablet() ? wp(40) : hp(53) },
   mainSubView: {
     alignSelf: 'center',
     justifyContent: 'center',
+    alignContent: 'center',
+
     backgroundColor: ColorSystem.White,
     padding: styleValues.paddin03,
     borderRadius: styleValues.radius15,
