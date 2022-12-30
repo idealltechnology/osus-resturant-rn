@@ -5,6 +5,6 @@ import { IStyle } from './IStyle';
 export interface IButtonContainer extends IStyle<ViewStyle> {
   events?: IEvent;
   color: string;
-  fill?: boolean;
+  fill?: 'fill' | 'dim';
   disabled?: boolean;
 }

@@ -16,7 +16,7 @@ import Langs from './item/Langs';
 import RNRestart from 'react-native-restart';
 import ColorSystem from '../../../configs/color/ColorSystem';
 
-const LangChanger: FC = React.forwardRef(() => {
+export default () => {
   const modalRef = useRef<any>();
   var currentLang: string | undefined = '';
   AsyncStorage.getItem(userLanguage).then((lang) => {
@@ -68,8 +68,7 @@ const LangChanger: FC = React.forwardRef(() => {
       </CModal>
     </View>
   );
-});
-export default LangChanger;
+};
 const defStyle = StyleSheet.create({
   container: { justifyContent: 'center', flexDirection: 'row' },
   flatList: {},

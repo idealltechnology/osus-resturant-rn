@@ -1,12 +1,10 @@
-import React, { useEffect, FC, useState, useRef } from 'react';
+import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
+import mt, { labels } from '../../../../translation/lang/basics/ILangValuesEnum';
 import Btn from './Btn';
-import mt, { labels, routs } from '../../../../translation/lang/basics/ILangValuesEnum';
-import mrvTxtTest from '../../../../utilities/mrvTxtTest';
-import styleValues from '../../../../components/utils/enums/styleValues';
 
-export default ({ press }: { press: (isIn: boolean) => void }) => {
-  const [isInrest, set_isInrest] = useState(false);
+export default ({ press, inRes }: { press: (isIn: boolean) => void; inRes: boolean }) => {
+  const [isInrest, set_isInrest] = useState(true);
   return (
     <View style={defStyle.baseView}>
       <Btn
@@ -15,16 +13,16 @@ export default ({ press }: { press: (isIn: boolean) => void }) => {
           press(true);
           set_isInrest(true);
         }}
-        selected={isInrest}
+        selected={inRes}
       />
       <View style={defStyle.gap} />
       <Btn
-        text={mt(routs.NewOrder)}
+        text={mt(labels.delivery)}
         press={() => {
           press(false);
           set_isInrest(false);
         }}
-        selected={!isInrest}
+        selected={!inRes}
       />
     </View>
   );

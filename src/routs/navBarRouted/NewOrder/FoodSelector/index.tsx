@@ -1,4 +1,3 @@
-import React, { useEffect, FC, useState, useRef } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { heightPercentageToDP } from 'react-native-responsive-screen';
 import CInputText from '../../../../components/molecules/CInputText';
@@ -28,7 +27,7 @@ export default () => {
 };
 
 const defStyle = StyleSheet.create({
-  baseView: { marginHorizontal: 0 },
+  baseView: {},
   inDelView: { flexDirection: 'column' },
   input: {
     marginTop: heightPercentageToDP(3),

@@ -1,8 +1,10 @@
-import React from 'react';
+import CTabletCulomn from '../../../../components/organisms/CTabletCulomn';
 import isTablet from '../../../../utilities/isTablet';
-import Mobile from './Mobile';
-import Tablet from './Tablet';
+import ResOrDel from '../ResOrDel';
 
-export default ({ press }: { press: (isIn: boolean) => void }) => {
-  return <>{isTablet() ? <Tablet press={press} /> : <Mobile press={press} />}</>;
+export default ({ press, inRes }: { press: (isIn: boolean) => void; inRes: boolean }) => {
+  function resDel() {
+    return <ResOrDel inRes={inRes} press={press} />;
+  }
+  return <>{isTablet() ? <CTabletCulomn start={resDel()} /> : resDel()}</>;
 };

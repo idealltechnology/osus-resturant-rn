@@ -4,7 +4,7 @@ import CText from '../../../atoms/CText';
 import { t } from 'i18next';
 import { IHeader } from '../IHeader';
 
-export default React.forwardRef(({ navigation }: IHeader) => {
+export default ({ navigation }: IHeader) => {
   const routName = () => {
     let state = navigation.getState();
     let index = state.index;
@@ -14,7 +14,7 @@ export default React.forwardRef(({ navigation }: IHeader) => {
   };
 
   return <CText text={routName()} style={defStyle.text} />;
-});
+};
 
 const defStyle = StyleSheet.create({
   text: { textAlign: 'center', fontWeight: 'bold' },

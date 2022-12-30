@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FlatList, ListRenderItem, StyleSheet, View } from 'react-native';
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
 import CButton from '../../../../../components/molecules/CButton';
@@ -24,7 +24,7 @@ export default ({ select }: { select: (item: IFloor) => void }) => {
         iButtonContainer={{
           color: isSelected ? ColorSystem.BrandColorDim : ColorSystem.gray!(5),
           style: defStyle.item,
-          fill: true,
+          fill: 'fill',
           events: {
             onPress() {
               select(item);
@@ -46,6 +46,7 @@ const defStyle = StyleSheet.create({
   baseView: {
     marginTop: styleValues.paddin03,
     marginHorizontal: styleValues.paddin03,
+    // flex: 1,
   },
   item: { minWidth: wp(25), marginHorizontal: styleValues.paddin01 },
 });

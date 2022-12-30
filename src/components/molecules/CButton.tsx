@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect, useImperativeHandle, FC } from 'react';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import React, { useState, useImperativeHandle, FC } from 'react';
+import { TouchableOpacity } from 'react-native';
 import { Spinner } from 'native-base';
 import { IButton } from '../utils/interfacesUI/IButton';
 import styleValues from '../utils/enums/styleValues';
@@ -15,12 +14,22 @@ export const CButton: FC<IButton> = React.forwardRef(({ iText, iIconSvg, iButton
 
   const [isLoading, setIsloading] = useState(false);
 
-  useEffect(() => {
-    return () => {
-      //destroy
-    };
-  }, []);
+  function backColor() {
+    let col = iButtonContainer?.color;
 
+    switch (iButtonContainer.fill) {
+      case 'dim':
+        return col + '60';
+      case 'fill':
+        return col;
+      default:
+        return ColorSystem.White;
+    }
+  }
+
+  function txt_icon_Color() {
+    return iButtonContainer?.fill !== 'fill' ? iButtonContainer?.color : ColorSystem.White;
+  }
   return (
     <TouchableOpacity
       disabled={iButtonContainer?.disabled}
@@ -34,20 +43,20 @@ export const CButton: FC<IButton> = React.forwardRef(({ iText, iIconSvg, iButton
           flexDirection: 'row',
           padding: styleValues.paddin03,
           borderRadius: styleValues.radius05,
-          backgroundColor: iButtonContainer?.fill ? iButtonContainer?.color + (iButtonContainer?.disabled ? '70' : '') : ColorSystem.White,
+          backgroundColor: backColor(),
           alignItems: 'center',
           justifyContent: 'center',
         },
         iButtonContainer?.style,
       ]}
     >
-      {iIconSvg && <CIconGenerator size={iIconSvg.size} iconName={iIconSvg.iconName(iButtonContainer?.fill ? ColorSystem.White! : iButtonContainer.color!)} />}
+      {iIconSvg && <CIconGenerator size={iIconSvg.size} iconName={iIconSvg.iconName(txt_icon_Color()!)} />}
 
       <CText
         {...iText}
         style={[
           {
-            color: !iButtonContainer?.fill ? iButtonContainer?.color : ColorSystem.White,
+            color: txt_icon_Color(),
             flex: 1,
             textAlign: 'center',
             textAlignVertical: 'center',
@@ -61,22 +70,3 @@ export const CButton: FC<IButton> = React.forwardRef(({ iText, iIconSvg, iButton
 });
 
 export default CButton;
-
-const defaultStyle = StyleSheet.create({
-  sharedStyle: {
-    height: 50,
-    width: wp(90),
-    margin: 0,
-  },
-
-  one: {
-    justifyContent: 'center',
-    alignSelf: 'center',
-    flexDirection: 'row',
-    marginHorizontal: 0,
-    padding: 0,
-    paddingHorizontal: 0,
-    paddingVertical: 0,
-    // borderWidth: 1,
-  },
-});

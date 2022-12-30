@@ -5,7 +5,7 @@ import { IHeader } from '../../organisms/CHeaader/IHeader';
 
 export interface IBaseView {
   style?: StyleProp<ViewStyle>;
-  children: Node[] | Node;
+  children?: Node[] | Node;
   header?: IHeader;
   navBar?: INavigatonBar;
 }

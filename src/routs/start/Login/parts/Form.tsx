@@ -1,6 +1,6 @@
 //#region ... imports
-import React, { useEffect, FC, useRef, useState } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { useEffect, FC, useState } from 'react';
+import { StyleSheet, View } from 'react-native';
 
 import CInputText from '../../../../components/molecules/CInputText';
 import ColorSystem from '../../../../configs/color/ColorSystem';
@@ -8,7 +8,6 @@ import CButton from '../../../../components/molecules/CButton';
 import mt, { labels, routs } from '../../../../translation/lang/basics/ILangValuesEnum';
 import styleValues from '../../../../components/utils/enums/styleValues';
 import Xml from '../../../../components/utils/svgs/Xml';
-import mrvTxtTest from '../../../../utilities/mrvTxtTest';
 
 //#endregion
 
@@ -40,7 +39,7 @@ const Form: FC = () => {
           keyboardType: !showPass ? 'pass' : 'visible-password',
         }}
         endIcon={{
-          iconName: showPass ? Xml.showPass : Xml.dontShowPass,
+          iconName: showPass ? Xml.eye : Xml.dontShowPass,
           color: ColorSystem.gray!(30),
           event: {
             onPress() {
@@ -51,7 +50,7 @@ const Form: FC = () => {
       />
       <CButton
         iButtonContainer={{
-          fill: true,
+          fill: 'fill',
           events: {
             onPress() {},
           },

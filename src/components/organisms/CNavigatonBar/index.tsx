@@ -1,4 +1,4 @@
-import React, { useImperativeHandle, FC } from 'react';
+import React, { useImperativeHandle, FC, Fragment } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { IHeader } from '../CHeaader/IHeader';
 import { Iitem } from './item/Iitem';
@@ -23,7 +23,13 @@ export default React.forwardRef(({ navigation }: IHeader, ref) => {
     return <Item item={item} current={routName()} navigation={navigation} />;
   };
 
-  return <View style={defStyle.conttainer}>{list.map((i) => item(i))}</View>;
+  return (
+    <View style={defStyle.conttainer}>
+      {list.map((i, index) => (
+        <Fragment key={index}>{item(i)}</Fragment>
+      ))}
+    </View>
+  );
 });
 
 const defStyle = StyleSheet.create({

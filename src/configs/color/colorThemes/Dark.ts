@@ -10,7 +10,7 @@ export const Dark: IBaseColor = {
 
   // BrandColor start
   BrandColor: `#FA7026`,
-  BrandColorDim: '#F9F2EE',
+  BrandColorDim: '#fa702660',
   SelectedBackgroundColor: `#111D2C`,
   Hover: `#096DD9`,
   Normal: `#188AEC`,

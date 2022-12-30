@@ -1,12 +1,42 @@
 import ColorSystem from '../../../configs/color/ColorSystem';
 
 const Xml = {
-  atSign(color: string) {
+  tik(color?: string) {
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 15 11">
+  <path id="Path_58" data-name="Path 58" d="M16.707,5.293a1,1,0,0,1,0,1.414l-8,8a1,1,0,0,1-1.414,0l-4-4A1,1,0,1,1,4.707,9.293L8,12.586l7.293-7.293a1,1,0,0,1,1.414,0Z" transform="translate(-3 -5)" fill=${colorer(
+    color,
+  )} fill-rule="evenodd"/>
+</svg>
+`;
+  },
+  plus(color?: string) {
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10">
+  <path id="Path_38" data-name="Path 38" d="M10,5a1,1,0,0,1,1,1V9h3a1,1,0,0,1,0,2H11v3a1,1,0,0,1-2,0V11H6A1,1,0,0,1,6,9H9V6A1,1,0,0,1,10,5Z" transform="translate(-5 -5)" fill=${colorer(
+    color,
+  )} fill-rule="evenodd"/>
+</svg>`;
+  },
+  pause(color?: string) {
+    return `
+    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 19.5 19.5">
+  <path id="Path_35" data-name="Path 35" d="M10,9v6m4-6v6m7-3a9,9,0,1,1-9-9A9,9,0,0,1,21,12Z" transform="translate(-2.25 -2.25)" fill="none" stroke=${colorer(
+    color,
+  )} stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+</svg>
+
+  `;
+  },
+
+  atSign(color?: string) {
     return `
     <svg id="Group_1789" data-name="Group 1789" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
   <path id="Path_1570" data-name="Path 1570" d="M0,0H24V24H0Z" fill="none"/>
-  <circle id="Ellipse_53" data-name="Ellipse 53" cx="4" cy="4" r="4" transform="translate(8.684 8)" fill="none" stroke="#c5c5c5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-  <path id="Path_1571" data-name="Path 1571" d="M16,12v1.5a2.5,2.5,0,0,0,5,0V12a9,9,0,1,0-5.5,8.28" fill="none" stroke="#c5c5c5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <circle id="Ellipse_53" data-name="Ellipse 53" cx="4" cy="4" r="4" transform="translate(8.684 8)" fill="none" stroke=${colorer(
+    color,
+  )}stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <path id="Path_1571" data-name="Path 1571" d="M16,12v1.5a2.5,2.5,0,0,0,5,0V12a9,9,0,1,0-5.5,8.28" fill="none" stroke=${colorer(
+    color,
+  )}stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
 </svg>
 `;
   },
@@ -40,12 +70,16 @@ m103 -133 c0 -105 -89 -179 -186 -155 -27 7 -26 9 71 106 54 54 102 97 107 94
 </svg>
 `;
   },
-  showPass() {
+  eye(color?: string) {
     return `
   <svg id="Group_1792" data-name="Group 1792" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
   <path id="Path_1572" data-name="Path 1572" d="M0,0H24V24H0Z" fill="none"/>
-  <circle id="Ellipse_54" data-name="Ellipse 54" cx="2" cy="2" r="2" transform="translate(10.684 10)" fill="none" stroke="#c5c5c5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-  <path id="Path_1573" data-name="Path 1573" d="M22,12q-4,7-10,7T2,12Q6,5,12,5t10,7" fill="none" stroke="#c5c5c5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <circle id="Ellipse_54" data-name="Ellipse 54" cx="2" cy="2" r="2" transform="translate(10.684 10)" fill="none" stroke=${colorer(
+    color,
+  )} stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <path id="Path_1573" data-name="Path 1573" d="M22,12q-4,7-10,7T2,12Q6,5,12,5t10,7" fill="none" stroke=${colorer(
+    color,
+  )} stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
 </svg>
 `;
   },

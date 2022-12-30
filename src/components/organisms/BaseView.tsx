@@ -13,7 +13,7 @@ const BaseView: FC<IBaseView> = React.forwardRef(({ children, header, navBar, st
   const navigatonBar = () => (
     <>
       {navBar && (
-        <View style={defStyl.nav}>
+        <View style={[defStyl.nav]}>
           <CNavigatonBar {...header!} />
         </View>
       )}
@@ -38,7 +38,7 @@ export default BaseView;
 const defStyl = StyleSheet.create({
   container: { height: '100%' },
   header: { flex: 1 },
-  body: { flex: 10, padding: styleValues.paddin05 },
+  body: { flex: 10, paddingHorizontal: styleValues.paddin05 },
   nav: { flex: 1 },
   skeleton: !true ? testStyles.tstB : {},
 });

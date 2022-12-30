@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyleSheet } from 'react-native';
 import CButton from '../../../../../components/molecules/CButton';
 import ColorSystem from '../../../../../configs/color/ColorSystem';
@@ -20,7 +19,7 @@ export default ({ selected, text, press }: InterFace) => {
             press();
           },
         },
-        fill: true,
+        fill: 'fill',
         color: selected ? ColorSystem.BrandColor : ColorSystem.gray!(5),
         style: defStyle.baseView,
       }}
