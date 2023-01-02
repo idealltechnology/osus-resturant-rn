@@ -2,9 +2,9 @@ import CTabletCulomn from '../../../../components/organisms/CTabletCulomn';
 import isTablet from '../../../../utilities/isTablet';
 import ResOrDel from '../ResOrDel';
 
-export default ({ press, inRes }: { press: (isIn: boolean) => void; inRes: boolean }) => {
+export default () => {
   function resDel() {
-    return <ResOrDel inRes={inRes} press={press} />;
+    return <ResOrDel />;
   }
   return <>{isTablet() ? <CTabletCulomn start={resDel()} /> : resDel()}</>;
 };

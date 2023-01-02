@@ -1,7 +1,5 @@
-import isTablet from '../../../../utilities/isTablet';
-import Mobile from './mobile';
-import Tablet from './tablet';
+import TabletOrMobile from './tabletOrMobile';
 
 export default () => {
-  return <>{isTablet() ? <Tablet /> : <Mobile />}</>;
+  return <TabletOrMobile />;
 };

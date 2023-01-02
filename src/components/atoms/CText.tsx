@@ -20,7 +20,9 @@ export const CText: FC<IText> = React.forwardRef(({ text, events, style, disable
   };
   const _text = () => {
     var txt = text || '';
-    txt = txt!.replace('undefined', '').replace('null', '');
+
+    txt = txt.toString()!.replace('undefined', '').replace('null', '');
+
     return txt;
   };
 

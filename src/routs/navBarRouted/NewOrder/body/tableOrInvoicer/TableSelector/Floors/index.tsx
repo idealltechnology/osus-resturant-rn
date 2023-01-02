@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { FlatList, ListRenderItem, StyleSheet, View } from 'react-native';
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
-import CButton from '../../../../../components/molecules/CButton';
-import styleValues from '../../../../../components/utils/enums/styleValues';
-import ColorSystem from '../../../../../configs/color/ColorSystem';
+import CButton from '../../../../../../../components/molecules/CButton';
+import styleValues from '../../../../../../../components/utils/enums/styleValues';
+import ColorSystem from '../../../../../../../configs/color/ColorSystem';
 import { IFloor } from './IFloor';
 
 var f1: IFloor = { id: 1, name: 'Firt floor' };
@@ -44,9 +44,8 @@ export default ({ select }: { select: (item: IFloor) => void }) => {
 
 const defStyle = StyleSheet.create({
   baseView: {
-    marginTop: styleValues.paddin03,
-    marginHorizontal: styleValues.paddin03,
-    // flex: 1,
+    marginTop: styleValues.paddin03, // flex: 1,
+    marginBottom: styleValues.paddin02, // flex: 1,
   },
   item: { minWidth: wp(25), marginHorizontal: styleValues.paddin01 },
 });

@@ -1,14 +1,12 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useNavigation } from '@react-navigation/native';
 
-import React, { useState, useEffect, useRef, FC } from 'react';
-import { Text, LayoutAnimation, StyleSheet, Platform, TouchableOpacity, UIManager, View } from 'react-native';
+import { useState, useEffect, useRef, FC } from 'react';
+import { StyleSheet } from 'react-native';
 import CLogo from '../../../components/atoms/CLogo';
 import BaseView from '../../../components/organisms/BaseView';
 import { ILogo } from '../../../components/utils/interfacesUI/ILogo';
 import { RoutsEnum } from '../../../navigation/router/RoutsEnum';
 import i18n from 'i18next';
-import mrvTxtTest from '../../../utilities/mrvTxtTest';
 import userLanguage from '../../../translation/lang/basics/userLanguage';
 import { ISplashProps } from './ISplashProps';
 

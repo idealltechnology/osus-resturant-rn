@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { ScrollView, View, StyleSheet } from 'react-native';
-import CText from '../../../../../components/atoms/CText';
-import styleValues from '../../../../../components/utils/enums/styleValues';
-import ColorSystem from '../../../../../configs/color/ColorSystem';
+import { StyleSheet, FlatList } from 'react-native';
+import CText from '../../../../../../../components/atoms/CText';
+import styleValues from '../../../../../../../components/utils/enums/styleValues';
+import ColorSystem from '../../../../../../../configs/color/ColorSystem';
+import isTablet from '../../../../../../../utilities/isTablet';
 
 export default ({ select }: { select: (item: number) => void }) => {
   const [seltdFloor, set_seltdFloor] = useState<number>(30);
@@ -30,30 +31,42 @@ export default ({ select }: { select: (item: number) => void }) => {
   };
   function tblMaker() {
     let list: number[] = [];
-    for (let index = 0; index < 44; index++) {
+    for (let index = 0; index < 20; index++) {
       list.push(index + 1);
     }
     return list;
   }
   return (
-    <ScrollView>
-      <View style={defStyle.baseView}>{tblMaker().map((item, index) => tableItem(item))}</View>
-    </ScrollView>
-    // <FlatList horizontal={isTablet()} numColumns={isTablet() ? 2 : 6} data={tblMaker()} renderItem={({ item }) => tableItem(item)} />
+    // <ScrollView horizontal={isTablet()}>
+    //   <View style={defStyle.baseView}>{tblMaker().map((item, index) => tableItem(item))}</View>
+    // </ScrollView>
+    <FlatList
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={defStyle.baseView}
+      horizontal={isTablet()}
+      numColumns={isTablet() ? undefined : 6}
+      data={tblMaker()}
+      renderItem={({ item }) => tableItem(item)}
+    />
   );
 };
 
 const defStyle = StyleSheet.create({
   baseView: {
-    flexShrink: 1,
-    flexWrap: 'wrap',
-    flexDirection: 'row',
+    width: '100%',
     justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    // flexShrink: 1,
+    // flexWrap: 'wrap',
+    // flexDirection: 'row',
+    // justifyContent: 'center',
+    // width: '100%',
   },
   item: {
     // flex: 1,
-    width: styleValues.paddin11,
-    height: styleValues.paddin11,
+    width: styleValues.paddin10,
+    height: styleValues.paddin12,
     textAlign: 'center',
     textAlignVertical: 'center',
     borderWidth: 1,

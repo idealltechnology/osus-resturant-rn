@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FlatList, ListRenderItem, StyleSheet, View } from 'react-native';
-import CText from '../../../../../components/atoms/CText';
-import styleValues from '../../../../../components/utils/enums/styleValues';
-import mrvTxtTest from '../../../../../utilities/mrvTxtTest';
+import CText from '../../../../../../components/atoms/CText';
+import styleValues from '../../../../../../components/utils/enums/styleValues';
+import isTablet from '../../../../../../utilities/isTablet';
+import mrvTxtTest from '../../../../../../utilities/mrvTxtTest';
 import FoodCategoryItem from './FoodCategoryItem';
 import FoodItem from './FoodItem';
 import { IFood } from './intefaces/IFood';
@@ -72,7 +73,13 @@ export default ({ select }: { select: (item: IFoodCategory) => void }) => {
           keyExtractor={(item, index) => index.toString()}
         />
       </View>
-      <FlatList showsVerticalScrollIndicator={false} data={[ff1, ff2, ff3, ff4, ff5, ff6, ff7, ff8]} renderItem={foodItem} keyExtractor={(item, index) => index.toString()} />
+      <FlatList
+        numColumns={isTablet() ? 3 : 1}
+        showsVerticalScrollIndicator={false}
+        data={[ff1, ff2, ff3, ff4, ff5, ff5, ff5, ff5, ff6, ff7, ff8]}
+        renderItem={foodItem}
+        keyExtractor={(item, index) => index.toString()}
+      />
     </View>
   );
 };

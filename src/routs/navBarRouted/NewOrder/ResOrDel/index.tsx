@@ -1,28 +1,26 @@
-import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import mt, { labels } from '../../../../translation/lang/basics/ILangValuesEnum';
+import { useGlobalContext } from '../context';
 import Btn from './Btn';
 
-export default ({ press, inRes }: { press: (isIn: boolean) => void; inRes: boolean }) => {
-  const [isInrest, set_isInrest] = useState(true);
+export default () => {
+  const { inRest, setInRest } = useGlobalContext();
   return (
     <View style={defStyle.baseView}>
       <Btn
         text={mt(labels.inResturent)}
         press={() => {
-          press(true);
-          set_isInrest(true);
+          setInRest(true);
         }}
-        selected={inRes}
+        selected={inRest}
       />
       <View style={defStyle.gap} />
       <Btn
         text={mt(labels.delivery)}
         press={() => {
-          press(false);
-          set_isInrest(false);
+          setInRest(false);
         }}
-        selected={!inRes}
+        selected={!inRest}
       />
     </View>
   );

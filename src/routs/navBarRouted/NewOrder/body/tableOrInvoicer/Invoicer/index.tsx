@@ -1,8 +1,9 @@
 import { StyleSheet, View } from 'react-native';
-import CButton from '../../../../components/molecules/CButton';
-import styleValues from '../../../../components/utils/enums/styleValues';
-import Xml from '../../../../components/utils/svgs/Xml';
-import ColorSystem from '../../../../configs/color/ColorSystem';
+import CButton from '../../../../../../components/molecules/CButton';
+import styleValues from '../../../../../../components/utils/enums/styleValues';
+import Xml from '../../../../../../components/utils/svgs/Xml';
+import ColorSystem from '../../../../../../configs/color/ColorSystem';
+import isTablet from '../../../../../../utilities/isTablet';
 
 export default () => {
   return (
@@ -33,14 +34,11 @@ export default () => {
 
 const defStyle = StyleSheet.create({
   inDelView: {
-    flexDirection: 'row',
-    marginTop: styleValues.paddin03,
-    flexWrap: 'wrap',
+    flexDirection: isTablet() ? 'row' : 'column',
+    // flexWrap: 'wrap',
+    alignItems: 'center',
     justifyContent: 'center',
   },
-  btn: {
-    margin: styleValues.paddin01,
-    width: styleValues.paddin05 * 8.4,
-  },
+  btn: isTablet() ? { flex: 1, marginHorizontal: styleValues.paddin01 } : { width: '90%', marginVertical: styleValues.paddin03 },
   txt: {},
 });

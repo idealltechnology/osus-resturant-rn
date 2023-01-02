@@ -1,9 +1,9 @@
 import { StyleSheet, View } from 'react-native';
 import { heightPercentageToDP } from 'react-native-responsive-screen';
-import CInputText from '../../../../components/molecules/CInputText';
-import Xml from '../../../../components/utils/svgs/Xml';
-import ColorSystem from '../../../../configs/color/ColorSystem';
-import mrvTxtTest from '../../../../utilities/mrvTxtTest';
+import CInputText from '../../../../../components/molecules/CInputText';
+import Xml from '../../../../../components/utils/svgs/Xml';
+import ColorSystem from '../../../../../configs/color/ColorSystem';
+import mrvTxtTest from '../../../../../utilities/mrvTxtTest';
 import FoodType from './FoodType';
 
 export default () => {
