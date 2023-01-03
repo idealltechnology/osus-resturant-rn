@@ -2,11 +2,15 @@ import { StyleSheet, View } from 'react-native';
 import Floors from './Floors';
 import Tables from './Tables';
 
-export default () => {
+export default ({ select }: { select: (item: number) => void }) => {
   return (
     <View style={defStyle.main}>
       <Floors select={(item) => {}} />
-      <Tables select={(item) => {}} />
+      <Tables
+        select={(item) => {
+          select(item);
+        }}
+      />
     </View>
   );
 };

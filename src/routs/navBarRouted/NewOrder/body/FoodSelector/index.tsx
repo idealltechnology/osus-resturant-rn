@@ -6,9 +6,9 @@ import ColorSystem from '../../../../../configs/color/ColorSystem';
 import mrvTxtTest from '../../../../../utilities/mrvTxtTest';
 import FoodType from './FoodType';
 
-export default () => {
+export default ({ select }: { select?: () => void }) => {
   return (
-    <View style={defStyle.inDelView}>
+    <View style={defStyle.baseView}>
       <CInputText
         startIcon={{
           iconName: Xml.magnifier,
@@ -19,6 +19,7 @@ export default () => {
       />
       <FoodType
         select={(v) => {
+          select && select();
           mrvTxtTest.TSTtoast('ss');
         }}
       />
@@ -27,8 +28,7 @@ export default () => {
 };
 
 const defStyle = StyleSheet.create({
-  baseView: {},
-  inDelView: { flexDirection: 'column' },
+  baseView: { flexDirection: 'column', flex: 1 },
   input: {
     marginTop: heightPercentageToDP(3),
   },

@@ -2,8 +2,8 @@ import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
 import CText from '../../../../../../components/atoms/CText';
 import styleValues from '../../../../../../components/utils/enums/styleValues';
 import ColorSystem from '../../../../../../configs/color/ColorSystem';
-import { IFoodCategory } from './intefaces/IFoodCategory';
-import { IFoodCategoryItem } from './intefaces/IFoodCategoryItem';
+import { IFoodCategory } from '../intefaces/IFoodCategory';
+import { IFoodCategoryItem } from '../intefaces/IFoodCategoryItem';
 
 export default ({ select, food, isSelected }: IFoodCategoryItem) => {
   const item = (item: IFoodCategory) => {

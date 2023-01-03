@@ -6,8 +6,8 @@ import isTablet from '../../../../../../utilities/isTablet';
 import mrvTxtTest from '../../../../../../utilities/mrvTxtTest';
 import FoodCategoryItem from './FoodCategoryItem';
 import FoodItem from './FoodItem';
-import { IFood } from './intefaces/IFood';
-import { IFoodCategory } from './intefaces/IFoodCategory';
+import { IFood } from '../intefaces/IFood';
+import { IFoodCategory } from '../intefaces/IFoodCategory';
 
 var f1: IFood = { code: '', price: 2, id: 1, name: 'pizza', image: '' };
 var f2: IFoodCategory = { id: 2, name: 'salad', image: '' };
@@ -51,7 +51,9 @@ export default ({ select }: { select: (item: IFoodCategory) => void }) => {
       <FoodItem
         isSelected={isSelected}
         food={item}
-        select={() => {
+        select={(item) => {
+          select(item);
+
           set_selectedFood(item);
           mrvTxtTest.TSTtoast(item);
         }}
@@ -87,6 +89,7 @@ export default ({ select }: { select: (item: IFoodCategory) => void }) => {
 const defStyle = StyleSheet.create({
   baseView: {
     marginTop: styleValues.paddin05,
+    flex: 1,
   },
   list: {
     marginTop: styleValues.paddin03,

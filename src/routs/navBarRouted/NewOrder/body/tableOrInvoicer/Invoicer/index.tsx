@@ -36,9 +36,10 @@ const defStyle = StyleSheet.create({
   inDelView: {
     flexDirection: isTablet() ? 'row' : 'column',
     // flexWrap: 'wrap',
+    width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  btn: isTablet() ? { flex: 1, marginHorizontal: styleValues.paddin01 } : { width: '90%', marginVertical: styleValues.paddin03 },
+  btn: isTablet() ? { flex: 1, marginHorizontal: styleValues.paddin01 } : { width: '100%', marginVertical: styleValues.paddin03 },
   txt: {},
 });

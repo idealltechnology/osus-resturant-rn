@@ -57,11 +57,6 @@ const defStyle = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
-    // flexShrink: 1,
-    // flexWrap: 'wrap',
-    // flexDirection: 'row',
-    // justifyContent: 'center',
-    // width: '100%',
   },
   item: {
     // flex: 1,
