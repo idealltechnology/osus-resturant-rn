@@ -9,6 +9,9 @@ export enum labels {
   userName = 'userName',
   password = 'password',
   enterYour = 'enterYour',
+  additionalFood = 'additionalFood',
+  save = 'save',
+  addItInvoice = 'addItInvoice',
 }
 
 export enum routs {

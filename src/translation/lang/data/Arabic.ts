@@ -9,7 +9,9 @@ const Arabic: ILangValues = {
     loginGuid: '',
     userName: '',
     password: '',
-    enterYour: '',
+    enterYour: 'ادخل ',
+    additionalFood: 'طعام مضاعف',
+    addItInvoice: 'ذخیره',
   },
 
   routs: {

@@ -10,6 +10,8 @@ const English: ILangValues = {
     userName: 'Username',
     password: 'Password',
     enterYour: 'Enter your',
+    additionalFood: 'Additional Food',
+    addItInvoice: 'Add it to invoice',
   },
   routs: {
     NewOrder: 'New Order',

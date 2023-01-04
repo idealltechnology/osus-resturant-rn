@@ -1,6 +1,6 @@
 import { StyleSheet, View } from 'react-native';
-import mt, { labels } from '../../../../translation/lang/basics/ILangValuesEnum';
-import { useGlobalContext } from '../context';
+import mt, { labels } from '../../../../../translation/lang/basics/ILangValuesEnum';
+import { useGlobalContext } from '../../context';
 import Btn from './Btn';
 
 export default () => {

@@ -1,12 +1,13 @@
 import { StyleSheet, View } from 'react-native';
 import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import styleValues from '../../../../../../../components/utils/enums/styleValues';
 import { IFood } from '../../intefaces/IFood';
 import Code from './particals/Code';
 import Image from './particals/Image';
 import Name from './particals/Name';
 import Price from './particals/Price';
 
-export default ({ code, image, name, price }: IFood) => {
+export default ({ code, image, name, price, id }: IFood) => {
   return (
     <View style={[defStyle.baseView]}>
       <Code text={code} style={[defStyle.common, defStyle.code]} />
@@ -22,10 +23,11 @@ const defStyle = StyleSheet.create({
     flexDirection: 'row',
     height: hp(7),
     alignItems: 'center',
+    paddingHorizontal: styleValues.paddin03,
   },
   common: { flex: 1, textAlign: 'center' },
-  code: {},
+  code: { textAlign: 'left' },
   image: { width: hp(6), height: hp(6) },
   name: {},
-  price: {},
+  price: { textAlign: 'right' },
 });

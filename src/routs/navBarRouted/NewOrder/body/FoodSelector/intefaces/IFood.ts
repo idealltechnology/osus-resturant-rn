@@ -4,4 +4,5 @@ export interface IFood {
   image: string;
   name: string;
   price: number;
+  addList?: IFood[];
 }

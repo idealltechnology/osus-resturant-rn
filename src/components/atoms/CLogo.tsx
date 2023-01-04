@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useImperativeHandle, FC } from 'react';
+import React, { useImperativeHandle, FC } from 'react';
 import { View } from 'react-native';
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
 

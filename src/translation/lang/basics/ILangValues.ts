@@ -8,6 +8,8 @@ export interface ILangValues {
     userName: string;
     password: string;
     enterYour: string;
+    additionalFood: string;
+    addItInvoice: string;
   };
 
   routs: {
