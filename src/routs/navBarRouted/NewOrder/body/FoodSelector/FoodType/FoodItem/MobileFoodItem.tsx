@@ -7,7 +7,7 @@ import Image from './particals/Image';
 import Name from './particals/Name';
 import Price from './particals/Price';
 
-export default ({ code, image, name, price, id }: IFood) => {
+export default ({ code, image, name, price, _id: id }: IFood) => {
   return (
     <View style={[defStyle.baseView]}>
       <Code text={code} style={[defStyle.common, defStyle.code]} />

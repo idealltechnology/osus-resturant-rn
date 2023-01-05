@@ -1,19 +1,22 @@
 import { useState } from 'react';
-import { StyleSheet, FlatList } from 'react-native';
+import { StyleSheet, FlatList, ListRenderItem } from 'react-native';
 import CText from '../../../../../../../components/atoms/CText';
 import styleValues from '../../../../../../../components/utils/enums/styleValues';
 import ColorSystem from '../../../../../../../configs/color/ColorSystem';
 import isTablet from '../../../../../../../utilities/isTablet';
+import { Model } from './item/Model';
 
-export default ({ select }: { select: (item: number) => void }) => {
-  const [seltdFloor, set_seltdFloor] = useState<number>(30);
+export default ({ select }: { select: (item: Model) => void }) => {
+  const [seltdFloor, set_seltdFloor] = useState<Model>({ tableNumber: '30', _id: '1' });
 
-  const tableItem = (item: number) => {
+  // const tableItem = (item: number) => {
+
+  const tableItem: ListRenderItem<Model> = ({ item }) => {
     let isSelected = item === seltdFloor;
     return (
       <CText
-        key={item}
-        text={item.toString()}
+        key={item._id}
+        text={item.tableNumber}
         style={[
           defStyle.item,
           {
@@ -30,9 +33,11 @@ export default ({ select }: { select: (item: number) => void }) => {
     );
   };
   function tblMaker() {
-    let list: number[] = [];
+    let list: Model[] = [];
     for (let index = 0; index < 20; index++) {
-      list.push(index + 1);
+      var ind = index + 1 + '';
+
+      list.push({ _id: ind, tableNumber: ind });
     }
     return list;
   }
@@ -40,24 +45,11 @@ export default ({ select }: { select: (item: number) => void }) => {
     // <ScrollView horizontal={isTablet()}>
     //   <View style={defStyle.baseView}>{tblMaker().map((item, index) => tableItem(item))}</View>
     // </ScrollView>
-    <FlatList
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={defStyle.baseView}
-      horizontal={isTablet()}
-      numColumns={isTablet() ? undefined : 6}
-      data={tblMaker()}
-      renderItem={({ item }) => tableItem(item)}
-    />
+    <FlatList showsVerticalScrollIndicator={false} horizontal={isTablet()} numColumns={isTablet() ? undefined : 6} data={tblMaker()} renderItem={tableItem} />
   );
 };
 
 const defStyle = StyleSheet.create({
-  baseView: {
-    width: '100%',
-    justifyContent: 'center',
-    alignContent: 'center',
-    alignItems: 'center',
-  },
   item: {
     // flex: 1,
     width: styleValues.paddin10,

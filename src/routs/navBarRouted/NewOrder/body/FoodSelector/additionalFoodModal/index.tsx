@@ -12,7 +12,7 @@ import AdditionalFoodItem from './AdditionalFoodItem';
 
 export default React.forwardRef(({}, ref) => {
   const moalRef = useRef<any>();
-  const [theFood, theFoodSetter] = useState<IFood>({ code: '', id: 0, image: '', name: '', price: 0 });
+  const [theFood, theFoodSetter] = useState<IFood>({ code: '', _id: 0, image: '', name: '', price: 0 });
   const [selectedFoods, selectedFoodsSetter] = useState<IFood[]>([]);
   useImperativeHandle(ref, () => {
     return { showModal };
@@ -31,7 +31,7 @@ export default React.forwardRef(({}, ref) => {
     theFoodSetter(food);
   };
   function isSelected(food: IFood) {
-    return selectedFoods.filter((i) => i.id === food.id).length > 0;
+    return selectedFoods.filter((i) => i._id === food._id).length > 0;
   }
   return (
     <>
@@ -53,7 +53,7 @@ export default React.forwardRef(({}, ref) => {
                       selectedFoodsSetter(sdf);
                     } else {
                       var sdf = ArrayHelper.deepClone(selectedFoods);
-                      selectedFoodsSetter(sdf.filter((i: IFood) => i.id !== item.id));
+                      selectedFoodsSetter(sdf.filter((i: IFood) => i._id !== item._id));
                     }
                   }}
                 />

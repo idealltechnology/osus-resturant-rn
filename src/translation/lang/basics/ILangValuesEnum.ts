@@ -12,6 +12,14 @@ export enum labels {
   additionalFood = 'additionalFood',
   save = 'save',
   addItInvoice = 'addItInvoice',
+  tables = 'tables',
+  foods = 'foods',
+  summery = 'summery',
+
+  finishInvoice = 'finishInvoice',
+  newCustomer = 'newCustomer',
+  pausInvoice = 'pausInvoice',
+  previewInvoice = 'previewInvoice',
 }
 
 export enum routs {

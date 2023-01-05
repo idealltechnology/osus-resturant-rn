@@ -3,28 +3,29 @@ import CButton from '../../../../../../components/molecules/CButton';
 import styleValues from '../../../../../../components/utils/enums/styleValues';
 import Xml from '../../../../../../components/utils/svgs/Xml';
 import ColorSystem from '../../../../../../configs/color/ColorSystem';
+import mt, { labels } from '../../../../../../translation/lang/basics/ILangValuesEnum';
 import isTablet from '../../../../../../utilities/isTablet';
 
 export default () => {
   return (
     <View style={defStyle.inDelView}>
       <CButton
-        iText={{ style: defStyle.txt, text: 'new customer' }} //
+        iText={{ style: defStyle.txt, text: mt(labels.newCustomer) }} //
         iButtonContainer={{ fill: 'fill', color: ColorSystem.BrandColor, style: defStyle.btn }} //
         iIconSvg={{ iconName: Xml.plus }} //
       />
       <CButton
-        iText={{ style: defStyle.txt, text: 'paus invoice' }} //
+        iText={{ style: defStyle.txt, text: mt(labels.pausInvoice) }} //
         iButtonContainer={{ fill: 'dim', color: ColorSystem.BrandColor, style: defStyle.btn }} //
         iIconSvg={{ iconName: Xml.pause }}
       />
       <CButton
-        iText={{ style: defStyle.txt, text: 'preview invoice' }} //
+        iText={{ style: defStyle.txt, text: mt(labels.previewInvoice) }} //
         iButtonContainer={{ color: ColorSystem.BrandColor, style: defStyle.btn }} //
         iIconSvg={{ iconName: Xml.eye }}
       />
       <CButton
-        iText={{ style: defStyle.txt, text: 'finish invoice' }} //
+        iText={{ style: defStyle.txt, text: mt(labels.finishInvoice) }} //
         iButtonContainer={{ fill: 'fill', color: ColorSystem.BrandColor, style: defStyle.btn }} //
         iIconSvg={{ iconName: Xml.tik }}
       />

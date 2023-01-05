@@ -12,6 +12,13 @@ const English: ILangValues = {
     enterYour: 'Enter your',
     additionalFood: 'Additional Food',
     addItInvoice: 'Add it to invoice',
+    tables: 'tables',
+    foods: 'foods',
+    summery: 'summery',
+    finishInvoice: 'finish Invoice',
+    newCustomer: 'new Customer',
+    pausInvoice: 'pause Invoice',
+    previewInvoice: 'preview Invoice',
   },
   routs: {
     NewOrder: 'New Order',

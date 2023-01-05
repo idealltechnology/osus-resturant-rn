@@ -10,6 +10,13 @@ export interface ILangValues {
     enterYour: string;
     additionalFood: string;
     addItInvoice: string;
+    tables: string;
+    foods: string;
+    summery: string;
+    newCustomer: string;
+    pausInvoice: string;
+    previewInvoice: string;
+    finishInvoice: string;
   };
 
   routs: {

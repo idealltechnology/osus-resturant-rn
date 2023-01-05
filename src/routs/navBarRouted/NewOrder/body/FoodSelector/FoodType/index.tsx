@@ -10,7 +10,7 @@ import { IFood } from '../intefaces/IFood';
 import { IFoodCategory } from '../intefaces/IFoodCategory';
 import AdditionalFood from '../additionalFoodModal';
 
-var f1: IFood = { code: '', price: 2, id: 1, name: 'pizza', image: '' };
+var f1: IFood = { code: '', price: 2, _id: 1, name: 'pizza', image: '' };
 var f2: IFoodCategory = { id: 2, name: 'salad', image: '' };
 var f3: IFoodCategory = { id: 3, name: 'coca', image: '' };
 var f4: IFoodCategory = { id: 4, name: 'soda', image: '' };
@@ -19,18 +19,18 @@ var f6: IFoodCategory = { id: 6, name: 'joice', image: '' };
 var f7: IFoodCategory = { id: 7, name: 'fish', image: '' };
 var f8: IFoodCategory = { id: 8, name: 'sea plate', image: '' };
 
-var ff1: IFood = { code: '1625', price: 2, id: 1, name: 'pizza', image: '' };
-var ff2: IFood = { code: '1625', price: 2, id: 2, name: 'salad', image: '' };
-var ff3: IFood = { code: '1625', price: 2, id: 3, name: 'coca', image: '' };
-var ff4: IFood = { code: '1625', price: 2, id: 4, name: 'soda', image: '' };
-var ff6: IFood = { code: '1625', price: 2, id: 6, name: 'joice', image: '' };
-var ff7: IFood = { code: '1625', price: 2, id: 7, name: 'fish', image: '' };
-var ff8: IFood = { code: '1625', price: 2, id: 8, name: 'sea plate', image: '' };
-var fff: IFood = { code: '1625', price: 2, id: 5, name: 'ghorme sabzi', image: '', addList: [ff1, ff2, ff3, ff4, ff6, ff8] };
+var ff1: IFood = { code: '1625', price: 2, _id: 1, name: 'pizza', image: '' };
+var ff2: IFood = { code: '1625', price: 2, _id: 2, name: 'salad', image: '' };
+var ff3: IFood = { code: '1625', price: 2, _id: 3, name: 'coca', image: '' };
+var ff4: IFood = { code: '1625', price: 2, _id: 4, name: 'soda', image: '' };
+var ff6: IFood = { code: '1625', price: 2, _id: 6, name: 'joice', image: '' };
+var ff7: IFood = { code: '1625', price: 2, _id: 7, name: 'fish', image: '' };
+var ff8: IFood = { code: '1625', price: 2, _id: 8, name: 'sea plate', image: '' };
+var fff: IFood = { code: '1625', price: 2, _id: 5, name: 'ghorme sabzi', image: '', addList: [ff1, ff2, ff3, ff4, ff6, ff8] };
 export default ({ select }: { select: (item: IFoodCategory) => void }) => {
   const adfMoalRef = useRef<any>();
 
-  const [selectedFoodCategory, set_selectedFoodCategory] = useState<IFoodCategory>(f1);
+  const [selectedFoodCategory, set_selectedFoodCategory] = useState<IFoodCategory>(f2);
 
   const [selectedFood, set_selectedFood] = useState<IFood | undefined>();
 
@@ -76,7 +76,7 @@ export default ({ select }: { select: (item: IFoodCategory) => void }) => {
           <FlatList
             showsHorizontalScrollIndicator={false}
             horizontal
-            data={[f1, f2, f3, f4, f5, f6, f7, f8]}
+            data={[f2, f3, f4, f5, f6, f7, f8]}
             renderItem={foodCategoryItem}
             keyExtractor={(item, index) => index.toString()}
           />

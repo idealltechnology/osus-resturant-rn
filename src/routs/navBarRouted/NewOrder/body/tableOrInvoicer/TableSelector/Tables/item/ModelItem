@@ -1,0 +1,4 @@
+import { Model } from './Model';
+export interface ModelItem extends Model {
+  select?: (item: number) => void;
+}

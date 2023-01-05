@@ -12,6 +12,13 @@ const Arabic: ILangValues = {
     enterYour: 'ادخل ',
     additionalFood: 'طعام مضاعف',
     addItInvoice: 'ذخیره',
+    tables: 'الکرسیات',
+    foods: 'الاطعمه',
+    summery: 'خلاصه',
+    finishInvoice: 'ختم فاکتور',
+    newCustomer: 'مشتری جدید',
+    pausInvoice: 'توقف فاکتور',
+    previewInvoice: 'مرور فاکتور',
   },
 
   routs: {

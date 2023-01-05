@@ -1,5 +1,4 @@
 import { StyleSheet, View } from 'react-native';
-import { heightPercentageToDP } from 'react-native-responsive-screen';
 import CInputText from '../../../../../components/molecules/CInputText';
 import Xml from '../../../../../components/utils/svgs/Xml';
 import ColorSystem from '../../../../../configs/color/ColorSystem';
@@ -29,7 +28,5 @@ export default ({ select }: { select?: () => void }) => {
 
 const defStyle = StyleSheet.create({
   baseView: { flexDirection: 'column', flex: 1 },
-  input: {
-    marginTop: heightPercentageToDP(3),
-  },
+  input: {},
 });

@@ -6,13 +6,13 @@ import styleValues from '../../../../../../../components/utils/enums/styleValues
 import ColorSystem from '../../../../../../../configs/color/ColorSystem';
 import { IFloor } from './IFloor';
 
-var f1: IFloor = { id: 1, name: 'Firt floor' };
-var f2: IFloor = { id: 2, name: 'Second floor' };
+var f1: IFloor = { name: 'Firt floor' };
+var f2: IFloor = { name: 'Second floor' };
 export default ({ select }: { select: (item: IFloor) => void }) => {
   const [seltdFloor, set_seltdFloor] = useState<IFloor>(f1);
 
   const floorItem: ListRenderItem<IFloor> = ({ item }) => {
-    let isSelected = item.id === seltdFloor.id;
+    let isSelected = item === seltdFloor;
     return (
       <CButton
         iText={{

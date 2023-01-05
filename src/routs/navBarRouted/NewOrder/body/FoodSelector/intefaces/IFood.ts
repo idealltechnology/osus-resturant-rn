@@ -1,5 +1,5 @@
 export interface IFood {
-  id: number;
+  _id: number;
   code: string;
   image: string;
   name: string;
