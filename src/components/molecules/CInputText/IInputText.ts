@@ -1,8 +1,8 @@
 import { ViewStyle } from 'react-native';
-import { IIconSvg } from './IIconSvg';
+import { IIconSvg } from '../../utils/interfacesUI/IIconSvg';
 import { IInput } from './IInput';
-import { IStyle } from './IStyle';
-import { IText } from './IText';
+import { IStyle } from '../../utils/interfacesUI/IStyle';
+import { IText } from '../../atoms/Ctext/IText';
 
 export type IInputTextFunction = {
   _onError: (e: string) => void;

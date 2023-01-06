@@ -2,7 +2,7 @@ import { View } from 'native-base';
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import mt, { labels } from '../../../../../translation/lang/basics/ILangValuesEnum';
-import CText from '../../../../atoms/CText';
+import CText from '../../../../atoms/Ctext';
 
 export default ({ name }: { name: string }) => {
   return (

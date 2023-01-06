@@ -1,6 +1,6 @@
-import { IStyle } from './IStyle';
+import { IStyle } from '../../utils/interfacesUI/IStyle';
 import { TextStyle } from 'react-native';
-import { IEvent } from './IEvent';
+import { IEvent } from '../../utils/interfacesUI/IEvent';
 
 export interface IText extends IStyle<TextStyle> {
   events?: IEvent;

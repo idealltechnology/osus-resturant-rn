@@ -1,12 +1,12 @@
 import React, { FC, useImperativeHandle, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import ColorSystem from '../../configs/color/ColorSystem';
-import CIconGenerator from '../atoms/CIconGenerator';
-import CText from '../atoms/CText';
+import CIconGenerator from '../atoms/CIconGenerator/inedx';
+import CText from '../atoms/Ctext';
 import { EnumFontFamilly } from '../utils/enums/EnumFontFamilly';
 import { EnumFontSize } from '../utils/enums/EnumFontSize';
 import IDropdown from '../utils/interfacesUI/IDropdown';
-import { IText } from '../utils/interfacesUI/IText';
+import { IText } from '../atoms/Ctext/IText';
 import Xml from '../utils/svgs/Xml';
 import SelectDropdown from './dropdown';
 

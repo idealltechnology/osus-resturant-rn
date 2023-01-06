@@ -1,6 +1,8 @@
-import React, { useState, useRef, useImperativeHandle, useEffect } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
-import CButton from '../../../../../components/molecules/CButton';
+import React, { useEffect, useImperativeHandle, useRef } from 'react';
+import { StyleSheet, View } from 'react-native';
+import CGap from '../../../../../components/atoms/CGap/inex';
+import CText from '../../../../../components/atoms/Ctext';
+import CButton from '../../../../../components/molecules/CButton/CButton';
 import CInputText from '../../../../../components/molecules/CInputText';
 import CModal from '../../../../../components/organisms/CModal';
 import styleValues from '../../../../../components/utils/enums/styleValues';
@@ -10,35 +12,59 @@ import mt, { labels } from '../../../../../translation/lang/basics/ILangValuesEn
 export default React.forwardRef(({}, ref) => {
   const moalRef = useRef<any>();
   useImperativeHandle(ref, () => {
-    return { showModal };
+    return {
+      // showModal
+    };
   });
 
   useEffect(() => {
+    // moalRef.current.setShowModal(true);
+
     reset();
   }, []);
 
   const reset = () => {};
 
-  const showModal = () => {
-    moalRef.current.setShowModal(true);
-  };
+  // const showModal = () => {
+  //   moalRef.current.setShowModal(true);
+  // };
 
   return (
     <>
-      <CModal ref={moalRef} style={defStyl.modal}>
+      <CModal name={mt(labels.AddNote)} ref={moalRef} style={defStyl.modal}>
         <View style={defStyl.main}>
-          <CInputText input={{}} />
-          <CButton iText={{ text: mt(labels.addItInvoice) }} iButtonContainer={{ color: ColorSystem.BrandColor, fill: 'fill' }} />
+          <CInputText input={{}} style={defStyl.input} />
+          <CGap vertical thick={2} />
+          <CButton
+            iText={{ text: mt(labels.save) }}
+            iButtonContainer={{
+              events: {
+                onPress() {
+                  moalRef.current.setShowModal(false);
+                },
+              },
+              color: ColorSystem.BrandColor,
+              fill: 'fill',
+            }}
+          />
         </View>
       </CModal>
-      <CButton iText={{ text: 'AddNote' }} iButtonContainer={{ color: ColorSystem.BrandColor }} />
+      <CText
+        events={{
+          onPress() {
+            moalRef.current.setShowModal(true);
+          },
+        }}
+        text={mt(labels.AddNote)}
+        style={defStyl.addNote}
+      />
     </>
   );
 });
 
 const defStyl = StyleSheet.create({
   modal: {
-    marginVertical: styleValues.paddin10,
+    // marginVertical: styleValues.paddin15,
     padding: styleValues.paddin05,
   },
   main: {
@@ -46,23 +72,12 @@ const defStyl = StyleSheet.create({
     flex: 1,
     // borderWidth: 1,
   },
-  additionalBtn: { flex: 2 },
-  additionalTitle: { flex: 5 },
-  additional: {
-    flexDirection: 'row',
-  },
-  additionalList: {
-    padding: styleValues.paddin01,
+  input: {
     flex: 1,
-    flexWrap: 'wrap',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    // borderWidth: 1,
   },
 
-  foodItem: {
-    borderWidth: 1,
-    borderColor: ColorSystem.gray!(50),
-    borderRadius: styleValues.paddin01,
+  addNote: {
+    borderBottomWidth: 1.5,
+    borderBottomColor: ColorSystem.gray!(50),
   },
 });

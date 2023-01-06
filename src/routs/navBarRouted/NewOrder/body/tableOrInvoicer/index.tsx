@@ -10,7 +10,7 @@ export default ({ select }: { select?: (item: Model) => void }) => {
   const { inRest } = useGlobalContext();
 
   return (
-    <View style={[CommonStyles.card, defStyle.main]}>
+    <View style={[defStyle.main]}>
       {inRest ? (
         <TableSelector
           select={(i) => {
@@ -26,7 +26,6 @@ export default ({ select }: { select?: (item: Model) => void }) => {
 
 const defStyle = StyleSheet.create({
   main: {
-    marginVertical: styleValues.paddin05,
     padding: styleValues.paddin05,
   },
 });

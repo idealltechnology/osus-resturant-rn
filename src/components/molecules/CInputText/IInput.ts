@@ -1,7 +1,7 @@
 import { KeyboardTypeOptions, TextStyle } from 'react-native';
 import { IEvent } from './IEvent';
 import { IStyle } from './IStyle';
-import { IText } from './IText';
+import { IText } from '../../atoms/Ctext/IText';
 
 export interface IInput extends IStyle<TextStyle> {
   events?: IEvent;

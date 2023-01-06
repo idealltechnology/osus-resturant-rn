@@ -17,5 +17,7 @@ export default ({ select }: { select: (item: Model) => void }) => {
 };
 
 const defStyle = StyleSheet.create({
-  main: { flex: 1 },
+  main: {
+    // flex: 1
+  },
 });

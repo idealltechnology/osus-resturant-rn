@@ -1,6 +1,6 @@
 import { View, StyleSheet } from 'react-native';
 import ColorSystem from '../../../../configs/color/ColorSystem';
-import CText from '../../../atoms/CText';
+import CText from '../../../atoms/Ctext';
 import styleValues from '../../../utils/enums/styleValues';
 import { ISimpleTab } from '../ISimpleTab';
 

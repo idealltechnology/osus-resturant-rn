@@ -7,7 +7,7 @@ import { isExist } from './helpers/isExist';
 import Input from './components/Input';
 import { useKeyboardHeight } from './hooks/useKeyboardHeight';
 import { deepSearchInArr } from './helpers/deepSearchInArr';
-import CText from '../../../atoms/CText';
+import CText from '../../../atoms/Ctext';
 import CSeprator from '../../../atoms/CSeprator';
 const { height } = Dimensions.get('window');
 

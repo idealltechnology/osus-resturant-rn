@@ -10,7 +10,6 @@ export enum labels {
   password = 'password',
   enterYour = 'enterYour',
   additionalFood = 'additionalFood',
-  save = 'save',
   addItInvoice = 'addItInvoice',
   tables = 'tables',
   foods = 'foods',
@@ -20,6 +19,19 @@ export enum labels {
   newCustomer = 'newCustomer',
   pausInvoice = 'pausInvoice',
   previewInvoice = 'previewInvoice',
+  save = 'save',
+  AddNote = 'AddNote',
+  yes = 'yes',
+  no = 'no',
+  delete = 'delete',
+  cancel = 'cancel',
+  deletOrder = 'deletOrder',
+  areYouSureTodeletOrder = 'areYouSureTodeletOrder',
+  cln = 'cln',
+  smiCln = 'smiCln',
+
+  tableNumber = 'tableNumber',
+  typeTable = 'typeTable',
 }
 
 export enum routs {

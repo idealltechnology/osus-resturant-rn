@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import CIconGenerator from '../../components/atoms/CIconGenerator';
+import CIconGenerator from '../../components/atoms/CIconGenerator/inedx';
 import Xml from '../../components/utils/svgs/Xml';
 import ColorSystem from '../../configs/color/ColorSystem';
 import NewOrder from '../../routs/bottomRouted/NewOrder';

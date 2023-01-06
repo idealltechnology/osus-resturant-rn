@@ -1,6 +1,6 @@
 import React, { useEffect, useImperativeHandle, FC } from 'react';
 import { StyleSheet } from 'react-native';
-import CText from '../../../atoms/CText';
+import CText from '../../../atoms/Ctext';
 import { t } from 'i18next';
 import { IHeader } from '../IHeader';
 

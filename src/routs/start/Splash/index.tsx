@@ -2,9 +2,9 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { useState, useEffect, useRef, FC } from 'react';
 import { StyleSheet } from 'react-native';
-import CLogo from '../../../components/atoms/CLogo';
+import CLogo from '../../../components/atoms/CLogo/CLogo';
 import BaseView from '../../../components/organisms/BaseView';
-import { ILogo } from '../../../components/utils/interfacesUI/ILogo';
+import { ILogo } from '../../../components/atoms/CLogo/ILogo';
 import { RoutsEnum } from '../../../navigation/router/RoutsEnum';
 import i18n from 'i18next';
 import userLanguage from '../../../translation/lang/basics/userLanguage';

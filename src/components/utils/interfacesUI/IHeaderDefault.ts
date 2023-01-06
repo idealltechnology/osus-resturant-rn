@@ -1,8 +1,8 @@
 import { ViewStyle } from 'react-native';
 import { IEvent } from './IEvent';
-import { IICon } from './IICon';
+import { IICon } from '../../atoms/CIconGenerator/IICon';
 import { IStyle } from './IStyle';
-import { IText } from './IText';
+import { IText } from '../../atoms/Ctext/IText';
 
 export interface IHeaderDefault extends IStyle<ViewStyle> {
   title?: IText;

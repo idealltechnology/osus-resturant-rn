@@ -1,11 +1,10 @@
-import React, { useState, useImperativeHandle, FC } from 'react';
-import { Text } from 'react-native';
-import { StyleSheet } from 'react-native';
 import { Spinner, View } from 'native-base';
-import { ITextStared } from '../utils/interfacesUI/ITextStared';
-import ColorSystem from '../../configs/color/ColorSystem';
-import { EnumFontFamilly } from '../utils/enums/EnumFontFamilly';
-import { EnumFontSize } from '../utils/enums/EnumFontSize';
+import React, { FC, useImperativeHandle, useState } from 'react';
+import { StyleSheet, Text } from 'react-native';
+import ColorSystem from '../../../configs/color/ColorSystem';
+import { EnumFontFamilly } from '../../utils/enums/EnumFontFamilly';
+import { EnumFontSize } from '../../utils/enums/EnumFontSize';
+import { ITextStared } from './ITextStared';
 
 export const CTextStared: FC<ITextStared> = React.forwardRef(({ text, events, style, isNotRquierd }, ref) => {
   const [isLoading, setIsloading] = useState(false);
@@ -20,7 +19,7 @@ export const CTextStared: FC<ITextStared> = React.forwardRef(({ text, events, st
   };
   const _text = () => {
     var txt = text || '';
-    txt = txt!.replace('undefined', '').replace('null', '');
+    txt = txt!.toString().replace('undefined', '').replace('null', '');
 
     return txt;
   };

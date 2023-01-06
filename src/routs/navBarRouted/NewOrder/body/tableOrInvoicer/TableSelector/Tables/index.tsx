@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { StyleSheet, FlatList, ListRenderItem } from 'react-native';
-import CText from '../../../../../../../components/atoms/CText';
+import CText from '../../../../../../../components/atoms/Ctext';
 import styleValues from '../../../../../../../components/utils/enums/styleValues';
 import ColorSystem from '../../../../../../../configs/color/ColorSystem';
 import isTablet from '../../../../../../../utilities/isTablet';

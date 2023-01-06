@@ -1,20 +1,20 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import i18next from 'i18next';
 import { View } from 'native-base';
-import React, { FC, useRef } from 'react';
-import { FlatList, I18nManager, ListRenderItem, SafeAreaView, StyleSheet } from 'react-native';
+import React, { useRef } from 'react';
+import { FlatList, I18nManager, ListRenderItem, StyleSheet } from 'react-native';
+import RNRestart from 'react-native-restart';
+import ColorSystem from '../../../configs/color/ColorSystem';
 import userLanguage from '../../../translation/lang/basics/userLanguage';
-import CIconGenerator from '../../atoms/CIconGenerator';
+import CIconGenerator from '../../atoms/CIconGenerator/inedx';
 import CSeprator from '../../atoms/CSeprator';
-import CText from '../../atoms/CText';
+import CText from '../../atoms/Ctext';
 import { EnumFontSize } from '../../utils/enums/EnumFontSize';
 import styleValues from '../../utils/enums/styleValues';
 import Xml from '../../utils/svgs/Xml';
 import CModal from '../CModal';
 import { ILangView } from './item/ILangView';
 import Langs from './item/Langs';
-import RNRestart from 'react-native-restart';
-import ColorSystem from '../../../configs/color/ColorSystem';
 
 export default () => {
   const modalRef = useRef<any>();

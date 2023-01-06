@@ -1,9 +1,12 @@
-import React, { useState, useRef, useImperativeHandle, useEffect } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
-import CButton from '../../../../../components/molecules/CButton';
-import CInputText from '../../../../../components/molecules/CInputText';
+import React, { useEffect, useImperativeHandle, useRef } from 'react';
+import { StyleSheet, View } from 'react-native';
+import CGap from '../../../../../components/atoms/CGap/inex';
+import CIconGenerator from '../../../../../components/atoms/CIconGenerator/inedx';
+import CText from '../../../../../components/atoms/Ctext';
 import CModal from '../../../../../components/organisms/CModal';
+import { EnumFontSize } from '../../../../../components/utils/enums/EnumFontSize';
 import styleValues from '../../../../../components/utils/enums/styleValues';
+import Xml from '../../../../../components/utils/svgs/Xml';
 import ColorSystem from '../../../../../configs/color/ColorSystem';
 import mt, { labels } from '../../../../../translation/lang/basics/ILangValuesEnum';
 
@@ -14,10 +17,8 @@ export default React.forwardRef(({}, ref) => {
   });
 
   useEffect(() => {
-    reset();
+    // moalRef.current.setShowModal(true);
   }, []);
-
-  const reset = () => {};
 
   const showModal = () => {
     moalRef.current.setShowModal(true);
@@ -25,44 +26,56 @@ export default React.forwardRef(({}, ref) => {
 
   return (
     <>
-      <CModal ref={moalRef} style={defStyl.modal}>
+      <CModal ref={moalRef} screenMode="alert">
         <View style={defStyl.main}>
-          <CInputText input={{}} />
-          <CButton iText={{ text: mt(labels.addItInvoice) }} iButtonContainer={{ color: ColorSystem.BrandColor, fill: 'fill' }} />
+          <CIconGenerator iconName={Xml.warning} size={20} />
+          <CText text={mt(labels.deletOrder)} style={defStyl.title} />
+          <CText text={mt(labels.areYouSureTodeletOrder)} />
+          <View style={defStyl.yesNoView}>
+            <CText text={mt(labels.yes) + mt(labels.cln) + ' ' + mt(labels.delete)} style={[defStyl.yesNoBtn, defStyl.yes]} />
+            <CGap thick={10} />
+            <CText
+              text={mt(labels.no) + mt(labels.cln) + ' ' + mt(labels.cancel)}
+              style={[defStyl.yesNoBtn, defStyl.no]}
+              events={{
+                onPress() {
+                  moalRef.current.setShowModal(false);
+                },
+              }}
+            />
+          </View>
         </View>
       </CModal>
-      <CButton iText={{ text: 'AddNote' }} iButtonContainer={{ color: ColorSystem.BrandColor }} />
+      <CIconGenerator
+        iconName={Xml.delete}
+        events={{
+          onPress() {
+            moalRef.current.setShowModal(true);
+          },
+        }}
+      />
     </>
   );
 });
 
 const defStyl = StyleSheet.create({
-  modal: {
-    marginVertical: styleValues.paddin10,
-    padding: styleValues.paddin05,
-  },
   main: {
-    padding: styleValues.paddin01,
     flex: 1,
-    // borderWidth: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  additionalBtn: { flex: 2 },
-  additionalTitle: { flex: 5 },
-  additional: {
+  title: {
+    fontWeight: 'bold',
+    fontSize: EnumFontSize.h3,
+    marginVertical: styleValues.paddin03,
+  },
+  yesNoView: {
+    marginTop: styleValues.paddin05,
     flexDirection: 'row',
+    width: '70%',
+    justifyContent: 'center',
   },
-  additionalList: {
-    padding: styleValues.paddin01,
-    flex: 1,
-    flexWrap: 'wrap',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    // borderWidth: 1,
-  },
-
-  foodItem: {
-    borderWidth: 1,
-    borderColor: ColorSystem.gray!(50),
-    borderRadius: styleValues.paddin01,
-  },
+  yesNoBtn: { paddingVertical: styleValues.paddin03, paddingHorizontal: styleValues.paddin10, borderRadius: styleValues.radius05, textAlign: 'center' },
+  yes: { backgroundColor: ColorSystem.Error, color: ColorSystem.White },
+  no: { backgroundColor: ColorSystem.gray!(10), color: ColorSystem.gray!(60) },
 });

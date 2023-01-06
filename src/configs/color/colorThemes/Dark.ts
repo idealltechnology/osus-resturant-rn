@@ -5,7 +5,7 @@ export const Dark: IBaseColor = {
   Link: `#177DDC`,
   Success: `#49AA19`,
   Warning: `#D89614`,
-  Error: `#A61D24`,
+  Error: `#E71D36`,
   // Functional Colors end
 
   // BrandColor start

@@ -1,12 +1,12 @@
 import { NavigationProp, ParamListBase } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
-import CText from '../../../atoms/CText';
+import CText from '../../../atoms/Ctext';
 import { Iitem } from './Iitem';
 import { t } from 'i18next';
 import { routs } from '../../../../translation/lang/basics/ILangValuesEnum';
 import isTablet from '../../../../utilities/isTablet';
-import CIconGenerator from '../../../atoms/CIconGenerator';
+import CIconGenerator from '../../../atoms/CIconGenerator/inedx';
 import ColorSystem from '../../../../configs/color/ColorSystem';
 import Xml from '../../../utils/svgs/Xml';
 import { RoutsEnum } from '../../../../navigation/router/RoutsEnum';

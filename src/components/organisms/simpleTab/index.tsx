@@ -8,7 +8,7 @@ export default React.forwardRef(({ list }: { list: ISimpleTab[] }, ref) => {
   useImperativeHandle(ref, () => {
     return { movForward };
   });
-  const [selectedIndex, setSelectedIndex] = useState(1);
+  const [selectedIndex, setSelectedIndex] = useState(2);
   const movForward = () => {
     // mrvTxtTest.TSTtoast('movForward');
     var next = selectedIndex + 1;
@@ -27,4 +27,8 @@ export default React.forwardRef(({ list }: { list: ISimpleTab[] }, ref) => {
     </View>
   );
 });
-const defStyle = StyleSheet.create({ main: { flex: 1 } });
+const defStyle = StyleSheet.create({
+  main: {
+    flex: 1,
+  },
+});

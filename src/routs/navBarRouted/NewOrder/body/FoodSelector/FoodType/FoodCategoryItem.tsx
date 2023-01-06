@@ -1,5 +1,5 @@
 import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
-import CText from '../../../../../../components/atoms/CText';
+import CText from '../../../../../../components/atoms/Ctext';
 import styleValues from '../../../../../../components/utils/enums/styleValues';
 import ColorSystem from '../../../../../../configs/color/ColorSystem';
 import { IFoodCategory } from '../intefaces/IFoodCategory';

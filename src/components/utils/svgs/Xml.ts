@@ -242,9 +242,32 @@ m1815 40 c17 -17 -25 -34 -191 -78 -371 -99 -655 -265 -986 -577 -47 -44 -87
 `;
   },
 
-  magnifier(color: string) {
+  magnifier() {
     return `<svg xmlns="http://www.w3.org/2000/svg" width="17.023" height="17.023" viewBox="0 0 17.023 17.023">
   <path id="Path_57" data-name="Path 57" d="M17.609,17.609l-4.87-4.87m1.623-4.058A5.681,5.681,0,1,1,8.681,3,5.681,5.681,0,0,1,14.363,8.681Z" transform="translate(-2 -2)" fill="none" stroke="#d9d9d9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+</svg>
+`;
+  },
+
+  warning: `
+  <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+  <g id="Group_45922" data-name="Group 45922" transform="translate(0 0.3)">
+    <g id="Ellipse_66" data-name="Ellipse 66" transform="translate(0 -0.3)" fill="#fff" stroke=${ColorSystem.Warning} stroke-width="3">
+      <circle cx="35" cy="35" r="35" stroke="none"/>
+      <circle cx="35" cy="35" r="33.5" fill="none"/>
+    </g>
+    <g id="Group_45921" data-name="Group 45921" transform="translate(35 23)">
+      <path id="Path_119700" data-name="Path 119700" d="M18,12V27.469" transform="translate(-18 -12)" fill="none" stroke=${ColorSystem.Warning} stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_119701" data-name="Path 119701" d="M18,24h0" transform="translate(-18 1)" fill="none" stroke=${ColorSystem.Warning} stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>
+`,
+  close(color?: string) {
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="8.636" height="8.636" viewBox="0 0 8.636 8.636">
+  <path id="Path_119956" data-name="Path 119956" d="M4.211,4.211a.72.72,0,0,1,1.018,0L8.318,7.3l3.09-3.09a.72.72,0,1,1,1.018,1.018l-3.09,3.09,3.09,3.09a.72.72,0,1,1-1.018,1.018l-3.09-3.09-3.09,3.09a.72.72,0,1,1-1.018-1.018L7.3,8.318l-3.09-3.09a.72.72,0,0,1,0-1.018Z" transform="translate(-4 -4)" fill=${colorer(
+    color,
+  )} fill-rule="evenodd"/>
 </svg>
 `;
   },
@@ -284,6 +307,11 @@ m1815 40 c17 -17 -25 -34 -191 -78 -371 -99 -655 -265 -986 -577 -47 -44 -87
 </svg>
 `;
   },
+
+  delete: `<svg xmlns="http://www.w3.org/2000/svg" width="15.722" height="17.5" viewBox="0 0 15.722 17.5">
+  <path id="Path_54" data-name="Path 54" d="M17.333,6.556l-.771,10.793A1.778,1.778,0,0,1,14.789,19H7.433A1.778,1.778,0,0,1,5.66,17.348L4.889,6.556m4.444,3.556v5.333m3.556-5.333v5.333m.889-8.889V3.889A.889.889,0,0,0,12.889,3H9.333a.889.889,0,0,0-.889.889V6.556M4,6.556H18.222" transform="translate(-3.25 -2.25)" fill="none" stroke=${ColorSystem.Error} stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+</svg>
+`,
 };
 export default Xml;
 function colorer(color?: string) {

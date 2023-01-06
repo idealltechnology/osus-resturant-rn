@@ -19,6 +19,20 @@ const Arabic: ILangValues = {
     newCustomer: 'مشتری جدید',
     pausInvoice: 'توقف فاکتور',
     previewInvoice: 'مرور فاکتور',
+    save: 'ذخیره',
+    AddNote: 'ضاعف توضیحات',
+
+    yes: 'نعم',
+    no: 'لا',
+    delete: 'حذف',
+    cancel: 'لغو',
+    deletOrder: 'حذف الدستور',
+    areYouSureTodeletOrder: 'مطمئن حذف الدستور؟',
+    cln: '،',
+    smiCln: '؛',
+
+    tableNumber: 'رقم الکرسی',
+    typeTable: 'نوع الکرسی',
   },
 
   routs: {

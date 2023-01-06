@@ -1,11 +1,11 @@
-import React, { useState, useImperativeHandle, FC } from 'react';
-import { TouchableOpacity } from 'react-native';
 import { Spinner } from 'native-base';
-import { IButton } from '../utils/interfacesUI/IButton';
-import styleValues from '../utils/enums/styleValues';
-import CIconGenerator from '../atoms/CIconGenerator';
-import CText from '../atoms/CText';
-import ColorSystem from '../../configs/color/ColorSystem';
+import React, { FC, useImperativeHandle, useState } from 'react';
+import { TouchableOpacity } from 'react-native';
+import ColorSystem from '../../../configs/color/ColorSystem';
+import CIconGenerator from '../../atoms/CIconGenerator/inedx';
+import CText from '../../atoms/Ctext';
+import styleValues from '../../utils/enums/styleValues';
+import { IButton } from './IButton';
 
 export const CButton: FC<IButton> = React.forwardRef(({ iText, iIconSvg, iButtonContainer }, ref) => {
   useImperativeHandle(ref, () => {

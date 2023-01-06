@@ -2,9 +2,9 @@ import React, { useEffect, useImperativeHandle, FC } from 'react';
 import { TouchableOpacity } from 'react-native';
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
 import { SvgXml } from 'react-native-svg';
-import TextHelper from '../../utilities/TextHelper';
-import resizer from '../utils/enums/resizer';
-import { IICon } from '../utils/interfacesUI/IICon';
+import TextHelper from '../../../utilities/TextHelper';
+import resizer from '../../utils/enums/resizer';
+import { IICon } from './IICon';
 
 export const CIconGenerator: FC<IICon> = React.forwardRef(({ iconName, size = 5, style, events }, ref) => {
   useImperativeHandle(ref, () => {

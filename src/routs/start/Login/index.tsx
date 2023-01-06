@@ -7,7 +7,7 @@ import { IloginProps } from './IloginProps';
 import BaseView from '../../../components/organisms/BaseView';
 import ColorSystem from '../../../configs/color/ColorSystem';
 import { RoutsEnum } from '../../../navigation/router/RoutsEnum';
-import CLogo from '../../../components/atoms/CLogo';
+import CLogo from '../../../components/atoms/CLogo/CLogo';
 import Hello from './parts/Hello';
 import Form from './parts/Form';
 import styleValues from '../../../components/utils/enums/styleValues';

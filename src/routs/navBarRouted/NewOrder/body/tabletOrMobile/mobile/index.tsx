@@ -1,13 +1,16 @@
 import { useRef } from 'react';
-import CText from '../../../../../../components/atoms/CText';
 
 import SimpleTab from '../../../../../../components/organisms/simpleTab';
 import { ISimpleTab } from '../../../../../../components/organisms/simpleTab/ISimpleTab';
 import mt, { labels } from '../../../../../../translation/lang/basics/ILangValuesEnum';
+import AddNotAndDeletInvoice from '../../../addNotAndDeletInvoice';
 import FoodSelector from '../../FoodSelector';
+import Sunmery from '../../sunmery';
 import TableOrInvoicer from '../../tableOrInvoicer';
 
 export default () => {
+  // TODO mobile order body
+
   const simpleTabRef = useRef<any>();
 
   const tbls: ISimpleTab = {
@@ -35,7 +38,7 @@ export default () => {
   const summery: ISimpleTab = {
     id: 1,
     name: mt(labels.summery),
-    item: <CText text="sum" />,
+    item: <Sunmery />,
   };
   const list = [tbls, food, summery];
 

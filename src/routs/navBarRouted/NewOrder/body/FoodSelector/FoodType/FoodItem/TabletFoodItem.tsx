@@ -20,7 +20,7 @@ export default ({ code, image, name, price }: IFood) => {
 
 const defStyle = StyleSheet.create({
   baseView: {
-    // padding: styleValues.paddin01,
+    padding: styleValues.paddin01,
     flexDirection: 'column',
     width: wp(11.5),
     justifyContent: 'center',

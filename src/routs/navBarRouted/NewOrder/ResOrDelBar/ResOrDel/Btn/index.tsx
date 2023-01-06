@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import CButton from '../../../../../../components/molecules/CButton';
+import CButton from '../../../../../../components/molecules/CButton/CButton';
 import ColorSystem from '../../../../../../configs/color/ColorSystem';
 import { InterFace } from './InterFace';
 

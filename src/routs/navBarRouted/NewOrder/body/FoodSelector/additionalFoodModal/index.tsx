@@ -1,6 +1,6 @@
 import React, { useState, useRef, useImperativeHandle, useEffect } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import CButton from '../../../../../../components/molecules/CButton';
+import CButton from '../../../../../../components/molecules/CButton/CButton';
 import CModal from '../../../../../../components/organisms/CModal';
 import styleValues from '../../../../../../components/utils/enums/styleValues';
 import ColorSystem from '../../../../../../configs/color/ColorSystem';

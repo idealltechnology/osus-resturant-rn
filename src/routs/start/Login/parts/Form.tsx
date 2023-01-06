@@ -4,7 +4,7 @@ import { StyleSheet, View } from 'react-native';
 
 import CInputText from '../../../../components/molecules/CInputText';
 import ColorSystem from '../../../../configs/color/ColorSystem';
-import CButton from '../../../../components/molecules/CButton';
+import CButton from '../../../../components/molecules/CButton/CButton';
 import mt, { labels, routs } from '../../../../translation/lang/basics/ILangValuesEnum';
 import styleValues from '../../../../components/utils/enums/styleValues';
 import Xml from '../../../../components/utils/svgs/Xml';

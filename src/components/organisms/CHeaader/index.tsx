@@ -1,7 +1,7 @@
 import React, { useImperativeHandle } from 'react';
 import { View, StyleSheet, I18nManager } from 'react-native';
 import ColorSystem from '../../../configs/color/ColorSystem';
-import CIconGenerator from '../../atoms/CIconGenerator';
+import CIconGenerator from '../../atoms/CIconGenerator/inedx';
 import { IHeader } from './IHeader';
 import Xml from '../../utils/svgs/Xml';
 import Title from './particals/ScreenTitle';

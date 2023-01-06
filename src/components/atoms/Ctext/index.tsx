@@ -1,11 +1,10 @@
-import React, { useState, useImperativeHandle, FC } from 'react';
-import { Text } from 'react-native';
-import { StyleSheet } from 'react-native';
 import { Spinner } from 'native-base';
-import { IText } from '../utils/interfacesUI/IText';
-import ColorSystem from '../../configs/color/ColorSystem';
-import { EnumFontFamilly } from '../utils/enums/EnumFontFamilly';
-import { EnumFontSize } from '../utils/enums/EnumFontSize';
+import React, { FC, useImperativeHandle, useState } from 'react';
+import { StyleSheet, Text } from 'react-native';
+import ColorSystem from '../../../configs/color/ColorSystem';
+import { EnumFontFamilly } from '../../utils/enums/EnumFontFamilly';
+import { EnumFontSize } from '../../utils/enums/EnumFontSize';
+import { IText } from './IText';
 
 export const CText: FC<IText> = React.forwardRef(({ text, events, style, disabled, bold }, ref) => {
   const [isLoading, setIsloading] = useState(false);
@@ -42,5 +41,6 @@ const defaultStyle = StyleSheet.create({
     color: ColorSystem.Black,
     height: 'auto',
     textAlignVertical: 'center',
+    textAlign: 'center',
   },
 });

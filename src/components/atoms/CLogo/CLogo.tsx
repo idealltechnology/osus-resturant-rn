@@ -1,9 +1,9 @@
-import React, { useImperativeHandle, FC } from 'react';
+import React, { FC, useImperativeHandle } from 'react';
 import { View } from 'react-native';
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
 
 import { SvgXml } from 'react-native-svg';
-import { ILogo } from '../utils/interfacesUI/ILogo';
+import { ILogo } from './ILogo';
 
 export const CLogo: FC<ILogo> = React.forwardRef(({ size = 20, horizontal, style }, ref) => {
   useImperativeHandle(ref, () => {

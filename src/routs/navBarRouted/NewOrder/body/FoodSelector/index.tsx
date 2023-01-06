@@ -27,6 +27,6 @@ export default ({ select }: { select?: () => void }) => {
 };
 
 const defStyle = StyleSheet.create({
-  baseView: { flexDirection: 'column', flex: 1 },
+  baseView: { flexDirection: 'column' },
   input: {},
 });

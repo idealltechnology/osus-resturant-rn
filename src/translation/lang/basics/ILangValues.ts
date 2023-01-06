@@ -17,6 +17,18 @@ export interface ILangValues {
     pausInvoice: string;
     previewInvoice: string;
     finishInvoice: string;
+    save: string;
+    AddNote: string;
+    yes: string;
+    no: string;
+    delete: string;
+    cancel: string;
+    deletOrder: string;
+    areYouSureTodeletOrder: string;
+    cln: string;
+    smiCln: string;
+    tableNumber: string;
+    typeTable: string;
   };
 
   routs: {

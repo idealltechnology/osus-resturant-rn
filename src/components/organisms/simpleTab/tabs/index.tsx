@@ -12,6 +12,6 @@ export default ({ list, selected }: { list: ISimpleTab[]; selected: number }) =>
   );
 };
 const defStyle = StyleSheet.create({
-  main: { flexDirection: 'row', flex: 1, justifyContent: 'center' },
+  main: { flex: 1 },
   item: {},
 });

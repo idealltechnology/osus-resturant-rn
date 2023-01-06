@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native';
-import CButton from '../../../../../../components/molecules/CButton';
+import CButton from '../../../../../../components/molecules/CButton/CButton';
 import styleValues from '../../../../../../components/utils/enums/styleValues';
 import Xml from '../../../../../../components/utils/svgs/Xml';
 import ColorSystem from '../../../../../../configs/color/ColorSystem';

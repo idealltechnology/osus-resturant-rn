@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { FlatList, ListRenderItem, StyleSheet, View } from 'react-native';
-import CText from '../../../../../../components/atoms/CText';
+import CText from '../../../../../../components/atoms/Ctext';
 import styleValues from '../../../../../../components/utils/enums/styleValues';
 import isTablet from '../../../../../../utilities/isTablet';
 import mrvTxtTest from '../../../../../../utilities/mrvTxtTest';
@@ -96,7 +96,6 @@ export default ({ select }: { select: (item: IFoodCategory) => void }) => {
 const defStyle = StyleSheet.create({
   baseView: {
     marginTop: styleValues.paddin05,
-    flex: 1,
   },
   list: {
     marginTop: styleValues.paddin03,
