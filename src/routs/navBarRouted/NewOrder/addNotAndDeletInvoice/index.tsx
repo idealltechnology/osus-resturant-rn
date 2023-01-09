@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import CGap from '../../../../components/atoms/CGap/inex';
+import CGap from '../../../../components/atoms/CGap';
 import AddNote from './addNote';
 import DeletInvoice from './deletInvoice';
 

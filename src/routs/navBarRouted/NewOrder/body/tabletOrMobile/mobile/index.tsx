@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { ScrollView } from 'react-native';
 
 import SimpleTab from '../../../../../../components/organisms/simpleTab';
 import { ISimpleTab } from '../../../../../../components/organisms/simpleTab/ISimpleTab';
@@ -38,7 +39,11 @@ export default () => {
   const summery: ISimpleTab = {
     id: 1,
     name: mt(labels.summery),
-    item: <Sunmery />,
+    item: (
+      <ScrollView>
+        <Sunmery />
+      </ScrollView>
+    ),
   };
   const list = [tbls, food, summery];
 

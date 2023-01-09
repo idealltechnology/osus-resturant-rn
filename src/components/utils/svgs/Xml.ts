@@ -163,6 +163,43 @@ m1815 40 c17 -17 -25 -34 -191 -78 -371 -99 -655 -265 -986 -577 -47 -44 -87
         </svg>
                 `;
   },
+  cash(color: string) {
+    return `
+  <svg id="Group_48330" data-name="Group 48330" xmlns="http://www.w3.org/2000/svg" width="24.918" height="24.918" viewBox="0 0 24.918 24.918">
+  <path id="Path_119889" data-name="Path 119889" d="M0,0H24.918V24.918H0Z" fill="none"/>
+  <rect id="Rectangle_17600" data-name="Rectangle 17600" width="14.536" height="10.383" rx="2" transform="translate(6.838 9.344)" fill="none" stroke=${colorer(
+    color,
+  )}  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <circle id="Ellipse_110" data-name="Ellipse 110" cx="2.077" cy="2.077" r="2.077" transform="translate(12.029 12.459)" fill="none" stroke=${colorer(
+    color,
+  )}  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <path id="Path_119890" data-name="Path 119890" d="M17.536,9.153V7.077A2.077,2.077,0,0,0,15.459,5H5.077A2.077,2.077,0,0,0,3,7.077v6.23a2.077,2.077,0,0,0,2.077,2.077H7.153" transform="translate(0.115 0.191)" fill="none" stroke=${colorer(
+    color,
+  )}  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+</svg>
+
+    `;
+  },
+  credit(color: string) {
+    return `
+  <svg id="Group_48334" data-name="Group 48334" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path id="Path_119891" data-name="Path 119891" d="M0,0H24V24H0Z" fill="none"/>
+  <rect id="Rectangle_17601" data-name="Rectangle 17601" width="18" height="14" rx="3" transform="translate(3 5)" fill="none" stroke=${colorer(
+    color,
+  )} stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <line id="Line_436" data-name="Line 436" x2="18" transform="translate(3 10)" fill="none" stroke=${colorer(
+    color,
+  )} stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <line id="Line_437" data-name="Line 437" x2="0.01" transform="translate(7 15)" fill="none" stroke=${colorer(
+    color,
+  )} stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <line id="Line_438" data-name="Line 438" x2="2" transform="translate(11 15)" fill="none" stroke=${colorer(
+    color,
+  )} stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+</svg>
+
+    `;
+  },
   newOrder(color: string) {
     return `
         <svg id="Group_49975" data-name="Group 49975" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

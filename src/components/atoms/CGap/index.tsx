@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { widthPercentageToDP } from 'react-native-responsive-screen';
+import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
 
 export default ({ thick = 1, vertical }: { thick?: number; vertical?: boolean }) => {
   return (
@@ -8,9 +8,9 @@ export default ({ thick = 1, vertical }: { thick?: number; vertical?: boolean })
       style={
         !vertical
           ? {
-              width: widthPercentageToDP(thick),
+              width: thick,
             }
-          : { height: widthPercentageToDP(thick) }
+          : { height: thick }
       }
     />
   );

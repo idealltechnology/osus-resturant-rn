@@ -1,6 +1,6 @@
 import React, { useEffect, useImperativeHandle, useRef } from 'react';
 import { StyleSheet, View } from 'react-native';
-import CGap from '../../../../../components/atoms/CGap/inex';
+import CGap from '../../../../../components/atoms/CGap';
 import CIconGenerator from '../../../../../components/atoms/CIconGenerator/inedx';
 import CText from '../../../../../components/atoms/Ctext';
 import CModal from '../../../../../components/organisms/CModal';

@@ -1,6 +1,6 @@
 import React, { useEffect, useImperativeHandle, useRef } from 'react';
 import { StyleSheet, View } from 'react-native';
-import CGap from '../../../../../components/atoms/CGap/inex';
+import CGap from '../../../../../components/atoms/CGap';
 import CText from '../../../../../components/atoms/Ctext';
 import CButton from '../../../../../components/molecules/CButton/CButton';
 import CInputText from '../../../../../components/molecules/CInputText';
