@@ -1,4 +1,5 @@
 import { StyleSheet, View } from 'react-native';
+import CGap from '../../../../../components/atoms/CGap';
 import CSeprator from '../../../../../components/atoms/CSeprator';
 import Amount from './amount';
 import Head from './head';
@@ -11,6 +12,7 @@ export default () => {
   return (
     <View style={defStyle.main}>
       <Head num="3" typ="First Floor" />
+      <CGap vertical thick={5} />
       <OrderTable num="3" typ="First Floor" />
       <CSeprator margV={2} />
       <PriceDetails Discount="" Subtotal="" Tax="" Total="" />

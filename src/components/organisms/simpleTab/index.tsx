@@ -8,7 +8,7 @@ export default React.forwardRef(({ list }: { list: ISimpleTab[] }, ref) => {
   useImperativeHandle(ref, () => {
     return { movForward };
   });
-  const [selectedIndex, setSelectedIndex] = useState(2);
+  const [selectedIndex, setSelectedIndex] = useState(1);
   const movForward = () => {
     // mrvTxtTest.TSTtoast('movForward');
     var next = selectedIndex + 1;

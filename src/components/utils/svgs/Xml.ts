@@ -27,6 +27,39 @@ const Xml = {
   `;
   },
 
+  increse: `<svg xmlns="http://www.w3.org/2000/svg" width="5.13" height="3.848" viewBox="0 0 5.13 3.848">
+  <path id="Path_119754" data-name="Path 119754" d="M5.13,3.848,2.565,0,0,3.848H5.13" fill="#707070"/>
+</svg>`,
+  decrease: `<svg fill="#707070" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 width="800px" height="800px" viewBox="0 0 96.154 96.154"
+	 xml:space="preserve">
+<g>
+	<path d="M0.561,20.971l45.951,57.605c0.76,0.951,2.367,0.951,3.127,0l45.956-57.609c0.547-0.689,0.709-1.716,0.414-2.61
+		c-0.061-0.187-0.129-0.33-0.186-0.437c-0.351-0.65-1.025-1.056-1.765-1.056H2.093c-0.736,0-1.414,0.405-1.762,1.056
+		c-0.059,0.109-0.127,0.253-0.184,0.426C-0.15,19.251,0.011,20.28,0.561,20.971z"/>
+</g>
+</svg>
+`,
+  first: `<svg xmlns="http://www.w3.org/2000/svg" width="10.758" height="10.067" viewBox="0 0 10.758 10.067">
+  <g id="Group_50" data-name="Group 50" transform="translate(10.758 10.067) rotate(180)">
+    <path id="Path_46" data-name="Path 46" d="M.221,9.821a.908.908,0,0,1,0-1.186l3.231-3.6L.221,1.432A.908.908,0,0,1,.22.246a.7.7,0,0,1,1.064,0L5.048,4.44a.908.908,0,0,1,0,1.186L1.285,9.821a.7.7,0,0,1-1.064,0Z" transform="translate(5.49 0)" fill="#25282b" fill-rule="evenodd"/>
+    <path id="Path_47" data-name="Path 47" d="M.221,9.821a.908.908,0,0,1,0-1.186l3.231-3.6L.221,1.432A.908.908,0,0,1,.22.246a.7.7,0,0,1,1.064,0L5.048,4.44a.908.908,0,0,1,0,1.186L1.285,9.821a.7.7,0,0,1-1.064,0Z" fill="#25282b" fill-rule="evenodd"/>
+  </g>
+</svg>
+`,
+  previous: `<svg xmlns="http://www.w3.org/2000/svg" width="5.919" height="10" viewBox="0 0 5.919 10">
+  <path id="Path_48" data-name="Path 48" d="M.289,9.707a1.01,1.01,0,0,1,0-1.414L3.537,5,.289,1.707a1.009,1.009,0,0,1,0-1.414.977.977,0,0,1,1.4,0l3.946,4a1.01,1.01,0,0,1,0,1.414l-3.946,4a.977.977,0,0,1-1.395,0Z" transform="translate(5.919 10) rotate(180)" fill="#25282b" fill-rule="evenodd"/>
+</svg>
+`,
+  next: `<svg xmlns="http://www.w3.org/2000/svg" width="5.919" height="10" viewBox="0 0 5.919 10">
+  <path id="Path_45" data-name="Path 45" d="M7.289,14.707a1.01,1.01,0,0,1,0-1.414L10.537,10,7.289,6.707a1.009,1.009,0,0,1,0-1.414.977.977,0,0,1,1.4,0l3.946,4a1.01,1.01,0,0,1,0,1.414l-3.946,4a.977.977,0,0,1-1.395,0Z" transform="translate(-7 -5)" fill="#25282b" fill-rule="evenodd"/>
+</svg>
+`,
+  last: `  <svg id="Group_49" data-name="Group 49" xmlns="http://www.w3.org/2000/svg" width="10.758" height="9.931" viewBox="0 0 10.758 9.931">
+  <path id="Path_46" data-name="Path 46" d="M10.221,13.689a.887.887,0,0,1,0-1.17l3.231-3.553L10.221,5.413a.887.887,0,0,1,0-1.17.706.706,0,0,1,1.064,0L15.048,8.38a.887.887,0,0,1,0,1.17l-3.763,4.138a.706.706,0,0,1-1.064,0Z" transform="translate(-4.51 -4)" fill="#25282b" fill-rule="evenodd"/>
+  <path id="Path_47" data-name="Path 47" d="M4.221,13.689a.887.887,0,0,1,0-1.17L7.452,8.966,4.221,5.413a.887.887,0,0,1,0-1.17.706.706,0,0,1,1.064,0L9.048,8.38a.887.887,0,0,1,0,1.17L5.285,13.689a.706.706,0,0,1-1.064,0Z" transform="translate(-4 -4)" fill="#25282b" fill-rule="evenodd"/>
+</svg>
+`,
   atSign(color?: string) {
     return `
     <svg id="Group_1789" data-name="Group 1789" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

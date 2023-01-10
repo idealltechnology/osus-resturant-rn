@@ -3,7 +3,9 @@ import CInputText from '../../../../../components/molecules/CInputText';
 import Xml from '../../../../../components/utils/svgs/Xml';
 import ColorSystem from '../../../../../configs/color/ColorSystem';
 import mrvTxtTest from '../../../../../utilities/mrvTxtTest';
-import FoodType from './FoodType';
+import Food from './Food';
+import FoodCategory from './FoodCategory';
+import Pager from './pager';
 
 export default ({ select }: { select?: () => void }) => {
   return (
@@ -16,12 +18,14 @@ export default ({ select }: { select?: () => void }) => {
         input={{ placeHoldr: { text: 'search', color: ColorSystem.gray!(20) } }}
         style={defStyle.input}
       />
-      <FoodType
+      <FoodCategory
         select={(v) => {
           select && select();
           mrvTxtTest.TSTtoast('ss');
         }}
       />
+      <Food select={(v) => {}} />
+      <Pager />
     </View>
   );
 };

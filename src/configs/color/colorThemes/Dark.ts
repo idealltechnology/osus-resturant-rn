@@ -22,7 +22,7 @@ export const Dark: IBaseColor = {
   PrimaryText: `#D9D9D9`,
   SecondaryText: `#737373`,
   Disable: `#4D4D4D`,
-  Border: `#333333`,
+  Border: `#3333335e`,
   Dividers: `#333333`,
   Background: `#1F1F1F`,
   TableHeader: `#141414`,

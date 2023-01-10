@@ -29,11 +29,13 @@ export default () => {
     id: 1,
     name: mt(labels.foods),
     item: (
-      <FoodSelector
-        select={() => {
-          simpleTabRef.current.movForward();
-        }}
-      />
+      <ScrollView>
+        <FoodSelector
+          select={() => {
+            simpleTabRef.current.movForward();
+          }}
+        />
+      </ScrollView>
     ),
   };
   const summery: ISimpleTab = {

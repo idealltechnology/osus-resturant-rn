@@ -1,12 +1,12 @@
 import React, { useState, useRef, useImperativeHandle, useEffect } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import CButton from '../../../../../../components/molecules/CButton/CButton';
-import CModal from '../../../../../../components/organisms/CModal';
-import styleValues from '../../../../../../components/utils/enums/styleValues';
-import ColorSystem from '../../../../../../configs/color/ColorSystem';
-import mt, { labels } from '../../../../../../translation/lang/basics/ILangValuesEnum';
-import ArrayHelper from '../../../../../../utilities/ArrayHelper';
-import { IFood } from '../intefaces/IFood';
+import CButton from '../../../../../../../components/molecules/CButton/CButton';
+import CModal from '../../../../../../../components/organisms/CModal';
+import styleValues from '../../../../../../../components/utils/enums/styleValues';
+import ColorSystem from '../../../../../../../configs/color/ColorSystem';
+import mt, { labels } from '../../../../../../../translation/lang/basics/ILangValuesEnum';
+import ArrayHelper from '../../../../../../../utilities/ArrayHelper';
+import { IFood } from '../../intefaces/IFood';
 import Additional from './Additional';
 import AdditionalFoodItem from './AdditionalFoodItem';
 

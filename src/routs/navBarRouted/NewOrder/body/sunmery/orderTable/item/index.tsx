@@ -3,20 +3,29 @@ import { EnumFontSize } from '../../../../../../../components/utils/enums/EnumFo
 import CGrayLabel from '../../../../../../../components/atoms/CGrayLabel';
 import { CText } from '../../../../../../../components/atoms/Ctext/index';
 import { Model } from './Model';
+import style from './style';
+import NumPickInput from './numPickInput';
 export default ({ action, discount, price, productName, quantity, total }: Model) => {
   return (
-    <View style={defStyle.main}>
-      <CText style={defStyle.txt} text={productName} />
-      <CGrayLabel style={defStyle.txt} text={quantity} />
-      <CGrayLabel style={defStyle.txt} text={price} />
-      <CGrayLabel style={defStyle.txt} text={discount} />
-      <CText style={defStyle.txt} text={total.toString()} />
-      <CText style={defStyle.txt} text={action} />
+    <View style={style.main}>
+      <View style={[style.inCommon, style.productName]}>
+        <CText style={style.txt} text={productName} />
+      </View>
+      <View style={[style.inCommon, style.quantity]}>
+        <NumPickInput />
+      </View>
+      <View style={[style.inCommon, style.price]}>
+        <NumPickInput />
+      </View>
+      <View style={[style.inCommon, style.discount]}>
+        <NumPickInput />
+      </View>
+      <View style={[style.inCommon, style.total]}>
+        <CText style={style.txt} text={total} />
+      </View>
+      <View style={[style.inCommon, style.action]}>
+        <CText style={style.txt} text={action} />
+      </View>
     </View>
   );
 };
-
-const defStyle = StyleSheet.create({
-  main: { flexDirection: 'row', flex: 1 },
-  txt: { flex: 1, fontSize: EnumFontSize.h6 },
-});
