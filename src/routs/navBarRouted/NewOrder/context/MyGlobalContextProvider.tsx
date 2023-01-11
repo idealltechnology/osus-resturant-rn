@@ -3,7 +3,7 @@ import { GlobalContentType } from './GlobalContentType';
 import MyGlobalContext from './MyGlobalContext';
 
 const MyGlobalContextProvider: FC<{ children: JSX.Element }> = ({ children }) => {
-  const [inRest, setInRest] = useState<boolean>(true);
+  const [inRest, setInRest] = useState<boolean>(false);
 
   function inRestHandler(value: boolean) {
     setInRest(value);

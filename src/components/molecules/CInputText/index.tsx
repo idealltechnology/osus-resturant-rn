@@ -79,7 +79,7 @@ export const CInputText: FC<IInputText> = React.forwardRef(({ requier, startIcon
             fontFamily: EnumFontFamilly.regularYekan,
             flex: 1,
           },
-          // input.style,
+          input.style,
         ]}
         maxLength={input.maxLength ? input.maxLength : input?.keyboardType === 'mobile' || 'phone-pad' ? 11 : 5000}
         placeholder={input?.placeHoldr?.text}
@@ -111,11 +111,10 @@ export const CInputText: FC<IInputText> = React.forwardRef(({ requier, startIcon
 // }
 export default CInputText;
 const defStyl = StyleSheet.create({
-  totalContainer: {},
   inputContainer: {
     // height: '100%',
 
-    width: '100%',
+    // width: '100%',
     borderColor: ColorSystem.gray!(20),
     flexDirection: 'row',
     alignItems: 'center',

@@ -1,7 +1,8 @@
 import { Spinner } from 'native-base';
 import React, { FC, useImperativeHandle, useState } from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 import ColorSystem from '../../../configs/color/ColorSystem';
+import CGap from '../../atoms/CGap';
 import CIconGenerator from '../../atoms/CIconGenerator/inedx';
 import CText from '../../atoms/Ctext';
 import styleValues from '../../utils/enums/styleValues';
@@ -50,14 +51,13 @@ export const CButton: FC<IButton> = React.forwardRef(({ iText, iIconSvg, iButton
         iButtonContainer?.style,
       ]}
     >
-      {iIconSvg && <CIconGenerator size={iIconSvg.size} iconName={iIconSvg.iconName(txt_icon_Color()!)} />}
-
+      {iIconSvg && <CIconGenerator style={{ marginEnd: styleValues.paddin01 }} size={iIconSvg.size} iconName={iIconSvg.iconName(txt_icon_Color()!)} />}
       <CText
         {...iText}
         style={[
           {
             color: txt_icon_Color(),
-            flex: 1,
+            // flex: 1,
             textAlign: 'center',
             textAlignVertical: 'center',
           },

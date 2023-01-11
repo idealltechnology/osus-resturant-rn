@@ -5,7 +5,7 @@ import ColorSystem from '../../../../../configs/color/ColorSystem';
 import mrvTxtTest from '../../../../../utilities/mrvTxtTest';
 import Food from './Food';
 import FoodCategory from './FoodCategory';
-import Pager from './pager';
+import Pager from '../../../../../components/organisms/pager';
 
 export default ({ select }: { select?: () => void }) => {
   return (
@@ -25,7 +25,7 @@ export default ({ select }: { select?: () => void }) => {
         }}
       />
       <Food select={(v) => {}} />
-      <Pager />
+      <Pager page={1} pages={5} />
     </View>
   );
 };

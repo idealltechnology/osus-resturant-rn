@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { StyleSheet, View } from 'react-native';
 import CButton from '../../../../../../components/molecules/CButton/CButton';
 import styleValues from '../../../../../../components/utils/enums/styleValues';
@@ -5,13 +6,27 @@ import Xml from '../../../../../../components/utils/svgs/Xml';
 import ColorSystem from '../../../../../../configs/color/ColorSystem';
 import mt, { labels } from '../../../../../../translation/lang/basics/ILangValuesEnum';
 import isTablet from '../../../../../../utilities/isTablet';
+import CustomersModal from './customersMangment/customersModal';
 
 export default () => {
+  const customersModalRef = useRef<any>();
+
+  // TODO
   return (
     <View style={defStyle.inDelView}>
+      <CustomersModal ref={customersModalRef} />
       <CButton
         iText={{ style: defStyle.txt, text: mt(labels.newCustomer) }} //
-        iButtonContainer={{ fill: 'fill', color: ColorSystem.BrandColor, style: defStyle.btn }} //
+        iButtonContainer={{
+          fill: 'fill',
+          color: ColorSystem.BrandColor,
+          style: defStyle.btn,
+          events: {
+            onPress() {
+              customersModalRef.current.showModal();
+            },
+          },
+        }} //
         iIconSvg={{ iconName: Xml.plus }} //
       />
       <CButton

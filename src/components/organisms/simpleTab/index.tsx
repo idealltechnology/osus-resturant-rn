@@ -5,10 +5,11 @@ import TabNames from './tabNames';
 import Tabs from './tabs';
 
 export default React.forwardRef(({ list }: { list: ISimpleTab[] }, ref) => {
+  // TODO
   useImperativeHandle(ref, () => {
     return { movForward };
   });
-  const [selectedIndex, setSelectedIndex] = useState(1);
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const movForward = () => {
     // mrvTxtTest.TSTtoast('movForward');
     var next = selectedIndex + 1;

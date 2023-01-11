@@ -10,4 +10,5 @@ export interface IModal extends IStyle<ViewStyle> {
   screenMode?: 'fullScreen' | 'bottom' | 'alert';
   backDropDontClose?: boolean;
   name?: string;
+  noHeader?: boolean;
 }

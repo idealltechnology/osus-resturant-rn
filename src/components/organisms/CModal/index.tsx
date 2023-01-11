@@ -47,6 +47,7 @@ export default React.forwardRef(({ children, name, screenMode, events, backDropD
           />
         </View>
       )}
+
       <>{children}</>
     </Modal>
   );
