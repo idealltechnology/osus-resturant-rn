@@ -29,6 +29,28 @@ export interface ILangValues {
     smiCln: string;
     tableNumber: string;
     typeTable: string;
+    productName: string;
+    quantity: string;
+    price: string;
+    discount: string;
+    total: string;
+    action: string;
+
+    subtotal: string;
+    tax: string;
+
+    paymentMethod: string;
+    cahs: string;
+    creditCard: string;
+
+    amount: string;
+    add: string;
+    customers: string;
+    address: string;
+    phone: string;
+    Name: string;
+    page: string;
+    from: string;
   };
 
   routs: {

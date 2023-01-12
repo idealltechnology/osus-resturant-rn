@@ -5,6 +5,7 @@ import { IStyle } from '../../utils/interfacesUI/IStyle';
 export interface IInput extends IStyle<TextStyle> {
   events?: IEvent;
   editable?: boolean;
+  multiline?: boolean;
   borderColor?: string;
   value?: string;
   placeHoldr?: { text: string; color?: string };

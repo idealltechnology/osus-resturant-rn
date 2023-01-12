@@ -5,6 +5,7 @@ import styleValues from '../../../../../../../components/utils/enums/styleValues
 import ColorSystem from '../../../../../../../configs/color/ColorSystem';
 import isTablet from '../../../../../../../utilities/isTablet';
 import { Model } from './item/Model';
+import CommonStyles from './../../../../../../../configs/CommonStyles';
 
 export default ({ select }: { select: (item: Model) => void }) => {
   const [seltdFloor, set_seltdFloor] = useState<Model>({ tableNumber: '30', _id: '1' });
@@ -19,6 +20,7 @@ export default ({ select }: { select: (item: Model) => void }) => {
         text={item.tableNumber}
         style={[
           defStyle.item,
+          CommonStyles.card,
           {
             color: isSelected ? ColorSystem.BrandColor : ColorSystem.Black,
           },
@@ -56,11 +58,7 @@ const defStyle = StyleSheet.create({
     height: styleValues.paddin12,
     textAlign: 'center',
     textAlignVertical: 'center',
-    borderWidth: 1,
     marginHorizontal: styleValues.paddin02,
     marginVertical: styleValues.paddin01,
-
-    borderRadius: styleValues.radius10,
-    borderColor: ColorSystem.gray!(5),
   },
 });

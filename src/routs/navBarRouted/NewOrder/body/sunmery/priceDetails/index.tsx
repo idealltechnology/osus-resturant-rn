@@ -6,11 +6,11 @@ import { Model } from './Model';
 export default ({ Discount, Subtotal, Tax, Total }: Model) => {
   return (
     <View style={defStyle.main}>
-      <Item name={'Subtotal'} value={Subtotal.toString()} />
-      <Item name={'Tax (10%)'} value={Tax.toString()} />
-      <Item name={'Discount'} value={Discount.toString()} />
+      <Item name={mt(labels.subtotal)} value={Subtotal.toString()} />
+      <Item name={mt(labels.tax)} value={Tax.toString()} />
+      <Item name={mt(labels.discount)} value={Discount.toString()} />
       <CSeprator margV={2} />
-      <Item name={'Total'} value={Total.toString()} bold />
+      <Item name={mt(labels.total)} value={Total.toString()} bold />
     </View>
   );
 };

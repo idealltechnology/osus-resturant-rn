@@ -5,12 +5,13 @@ import { CIconGenerator } from '../../atoms/CIconGenerator/inedx';
 import Xml from '../../utils/svgs/Xml';
 import mrvTxtTest from './../../../utilities/mrvTxtTest';
 import styleValues from '../../utils/enums/styleValues';
+import mt, { labels } from './../../../translation/lang/basics/ILangValuesEnum';
 
 export default ({ page, pages }: { page: number; pages: number }) => {
   // const [page,setPage]=useState(1)
   return (
     <View style={defStyle.main}>
-      <CText text={`page ${page} from ${pages}`} style={defStyle.txt} />
+      <CText text={`${mt(labels.page)} ${page} ${mt(labels.from)} ${pages}`} style={defStyle.txt} />
       <View style={defStyle.main}>
         <CIconGenerator
           style={defStyle.icon}

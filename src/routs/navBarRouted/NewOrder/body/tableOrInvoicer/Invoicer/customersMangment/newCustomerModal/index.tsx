@@ -22,18 +22,16 @@ export default React.forwardRef(({}, ref) => {
   };
 
   return (
-    <>
-      <CModal ref={moalRef} style={defStyle.modal} screenMode={isTablet() ? 'alert' : undefined}>
-        <Body />
-      </CModal>
-    </>
+    <CModal ref={moalRef} style={defStyle.modal} name="NewCustomerModal">
+      <Body />
+    </CModal>
   );
 });
 
 const defStyle = StyleSheet.create({
   modal: {
-    marginVertical: isTablet() ? styleValues.paddin15 : styleValues.paddin05,
-    width: isTablet() ? '80%' : '90%',
+    marginVertical: isTablet() ? styleValues.paddin10 : styleValues.paddin20,
+    width: isTablet() ? '60%' : '80%',
     borderRadius: styleValues.paddin03,
     padding: styleValues.paddin02,
   },

@@ -33,6 +33,31 @@ const Arabic: ILangValues = {
 
     tableNumber: 'رقم الکرسی',
     typeTable: 'نوع الکرسی',
+
+    productName: 'اسم محصول',
+    quantity: 'رقم',
+    price: 'مبلغ',
+    discount: 'تخفیف',
+    total: 'کل',
+    action: 'عمل',
+
+    subtotal: 'تحت کل!!!',
+    tax: 'مالیات',
+
+    paymentMethod: 'نوع پرداخت',
+    cahs: 'نقد',
+    creditCard: 'کارت اعتباری',
+
+    amount: 'مقدار',
+    add: 'اضاف',
+    customers: 'مشتریون',
+
+    address: 'آدرس',
+    phone: 'هاتف',
+    Name: 'اسم',
+
+    page: 'صفحه',
+    from: 'من',
   },
 
   routs: {

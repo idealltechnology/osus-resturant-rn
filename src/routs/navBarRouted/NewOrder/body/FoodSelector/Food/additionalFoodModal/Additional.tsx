@@ -28,6 +28,5 @@ const defStyl = StyleSheet.create({
     flexWrap: 'wrap',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    // borderWidth: 1,
   },
 });

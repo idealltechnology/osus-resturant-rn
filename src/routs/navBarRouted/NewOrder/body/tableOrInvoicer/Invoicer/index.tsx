@@ -16,7 +16,7 @@ export default () => {
     <View style={defStyle.inDelView}>
       <CustomersModal ref={customersModalRef} />
       <CButton
-        iText={{ style: defStyle.txt, text: mt(labels.newCustomer) }} //
+        iText={{ style: defStyle.txt, text: 'selectCustome' }} //
         iButtonContainer={{
           fill: 'fill',
           color: ColorSystem.BrandColor,

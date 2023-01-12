@@ -32,6 +32,29 @@ export enum labels {
 
   tableNumber = 'tableNumber',
   typeTable = 'typeTable',
+
+  productName = 'productName',
+  quantity = 'quantity',
+  price = 'price',
+  discount = 'discount',
+  total = 'total',
+  action = 'action',
+
+  subtotal = 'subtotal',
+  tax = 'tax',
+
+  paymentMethod = 'paymentMethod',
+  cahs = 'cahs',
+  creditCard = 'creditCard',
+
+  amount = 'amount',
+  add = 'add',
+  customers = 'customers',
+  address = 'address',
+  phone = 'phone',
+  Name = 'Name',
+  page = 'page',
+  from = 'from',
 }
 
 export enum routs {

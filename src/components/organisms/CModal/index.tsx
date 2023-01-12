@@ -33,22 +33,23 @@ export default React.forwardRef(({ children, name, screenMode, events, backDropD
       isVisible={showModal}
       style={[defStyl.default, styleDetecter(screenMode), style]}
     >
-      {screenMode !== 'alert' && (
-        <View style={defStyl.header}>
-          <CText text={name} />
-          <CIconGenerator
-            events={{
-              onPress() {
-                setShowModal(false);
-              },
-            }}
-            size={4}
-            iconName={Xml.close()}
-          />
-        </View>
-      )}
-
-      <>{children}</>
+      <View style={defStyl.body}>
+        {screenMode === undefined && (
+          <View style={defStyl.header}>
+            <CText text={name} />
+            <CIconGenerator
+              events={{
+                onPress() {
+                  setShowModal(false);
+                },
+              }}
+              size={4}
+              iconName={Xml.close()}
+            />
+          </View>
+        )}
+        <View style={defStyl.body}>{children}</View>
+      </View>
     </Modal>
   );
 });
@@ -58,10 +59,15 @@ const defStyl = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  default: {
-    backgroundColor: ColorSystem.White,
 
+  default: {
+    flexDirection: 'column',
+    backgroundColor: ColorSystem.White,
     alignSelf: 'center',
+  },
+  body: {
+    flex: 1,
+    // height: '100%',
   },
   normal: {
     borderRadius: styleValues.radius10,

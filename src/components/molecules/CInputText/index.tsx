@@ -4,13 +4,14 @@ import ColorSystem from '../../../configs/color/ColorSystem';
 import TextHelper from '../../../utilities/TextHelper';
 import CIconGenerator from '../../atoms/CIconGenerator/inedx';
 import { IText } from '../../atoms/Ctext/IText';
+import CTextStared from '../../atoms/CTextStared/CTextStared';
 import { EnumFontFamilly } from '../../utils/enums/EnumFontFamilly';
 import { EnumFontSize } from '../../utils/enums/EnumFontSize';
 import styleValues from '../../utils/enums/styleValues';
 import Xml from '../../utils/svgs/Xml';
 import { IInputText } from './IInputText';
 
-export const CInputText: FC<IInputText> = React.forwardRef(({ requier, startIcon, endIcon, title, input, style }, ref) => {
+export const CInputText: FC<IInputText> = React.forwardRef(({ startIcon, endIcon, title, input, style }, ref) => {
   useImperativeHandle(ref, () => {
     return { _onNotify };
   });
@@ -60,57 +61,62 @@ export const CInputText: FC<IInputText> = React.forwardRef(({ requier, startIcon
   };
 
   return (
-    <View style={[defStyl.inputContainer, style]}>
-      {startIcon && <CIconGenerator style={defStyl.icons} iconName={startIcon!.iconName(notif ? notifColor! : startIcon.color!)} size={startIcon!.size} />}
-      <TextInput
-        editable={input?.editable}
-        value={input.keyboardType === 'pass' ? ''.padEnd(value.length, '*') : value}
-        keyboardType={keyboardType()}
-        onChangeText={(e) => {
-          input?.events?.onChangeText && input?.events?.onChangeText(_textCorrecter(e));
-          setValue(_textCorrecter(e));
-          notifSetter(null);
-        }}
-        onSubmitEditing={input?.events?.onSubmitEditing}
-        style={[
-          {
-            height: '100%',
-            textAlign: 'right',
-            fontFamily: EnumFontFamilly.regularYekan,
-            flex: 1,
-          },
-          input.style,
-        ]}
-        maxLength={input.maxLength ? input.maxLength : input?.keyboardType === 'mobile' || 'phone-pad' ? 11 : 5000}
-        placeholder={input?.placeHoldr?.text}
-        placeholderTextColor={input?.placeHoldr?.color ? input?.placeHoldr?.color : ColorSystem.gray!(50)}
-        textAlignVertical={input?.textAlignVertical}
-        textAlign={input?.textAlign}
-      />
-
-      {endIcon ? (
-        <CIconGenerator events={endIcon.event} iconName={endIcon!.iconName(notif ? notifColor! : endIcon!.color!)} size={endIcon!.size} style={defStyl.icons} />
-      ) : value ? (
-        <CIconGenerator
-          style={defStyl.icons}
-          iconName={Xml.clearInputText()}
-          size={3}
-          events={{
-            onPress() {
-              setValue('');
-              input?.events?.onChangeText && input?.events?.onChangeText('');
-            },
+    <View style={[defStyl.main, style]}>
+      {title && <CTextStared {...title} />}
+      <View style={[defStyl.inputContainer]}>
+        {startIcon && <CIconGenerator style={defStyl.icons} iconName={startIcon!.iconName(notif ? notifColor! : startIcon.color!)} size={startIcon!.size} />}
+        <TextInput
+          multiline={input?.editable}
+          editable={input?.editable}
+          value={input.keyboardType === 'pass' ? ''.padEnd(value.length, '*') : value}
+          keyboardType={keyboardType()}
+          onChangeText={(e) => {
+            input?.events?.onChangeText && input?.events?.onChangeText(_textCorrecter(e));
+            setValue(_textCorrecter(e));
+            notifSetter(null);
           }}
+          onSubmitEditing={input?.events?.onSubmitEditing}
+          style={[
+            {
+              height: '100%',
+              textAlign: 'right',
+              fontFamily: EnumFontFamilly.regularYekan,
+              flex: 1,
+            },
+            input.style,
+          ]}
+          maxLength={input.maxLength ? input.maxLength : input?.keyboardType === 'mobile' || 'phone-pad' ? 11 : 5000}
+          placeholder={input?.placeHoldr?.text}
+          placeholderTextColor={input?.placeHoldr?.color ? input?.placeHoldr?.color : ColorSystem.gray!(50)}
+          textAlignVertical={input?.textAlignVertical}
+          textAlign={input?.textAlign}
         />
-      ) : (
-        <></>
-      )}
+
+        {endIcon ? (
+          <CIconGenerator events={endIcon.event} iconName={endIcon!.iconName(notif ? notifColor! : endIcon!.color!)} size={endIcon!.size} style={defStyl.icons} />
+        ) : value ? (
+          <CIconGenerator
+            style={defStyl.icons}
+            iconName={Xml.clearInputText()}
+            size={3}
+            events={{
+              onPress() {
+                setValue('');
+                input?.events?.onChangeText && input?.events?.onChangeText('');
+              },
+            }}
+          />
+        ) : (
+          <></>
+        )}
+      </View>
     </View>
   );
 });
 // }
 export default CInputText;
 const defStyl = StyleSheet.create({
+  main: {},
   inputContainer: {
     // height: '100%',
 

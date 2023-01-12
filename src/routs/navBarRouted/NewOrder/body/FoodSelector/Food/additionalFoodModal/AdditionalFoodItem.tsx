@@ -4,10 +4,14 @@ import ColorSystem from '../../../../../../../configs/color/ColorSystem';
 import isTablet from '../../../../../../../utilities/isTablet';
 import { IFoodItem } from '../../intefaces/IFoodItem';
 import MobileFoodItem from '../FoodItem/MobileFoodItem';
+import CommonStyles from './../../../../../../../configs/CommonStyles';
 
 export default ({ select, food, isSelected }: IFoodItem) => {
   return (
-    <TouchableOpacity onPress={() => select && select(food)} style={[defStyle.baseView, { borderColor: isSelected ? ColorSystem.BrandColor : ColorSystem.gray!(50) }]}>
+    <TouchableOpacity
+      onPress={() => select && select(food)}
+      style={[defStyle.baseView, CommonStyles.card, { borderColor: isSelected ? ColorSystem.BrandColor : ColorSystem.gray!(50) }]}
+    >
       <MobileFoodItem {...food} />
     </TouchableOpacity>
   );
@@ -15,8 +19,6 @@ export default ({ select, food, isSelected }: IFoodItem) => {
 
 const defStyle = StyleSheet.create({
   baseView: {
-    borderWidth: 1,
-    borderRadius: styleValues.radius10,
     width: isTablet() ? '49%' : '100%',
     marginVertical: styleValues.paddin01,
   },

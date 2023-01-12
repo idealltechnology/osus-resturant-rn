@@ -2,6 +2,7 @@ import React, { useImperativeHandle } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { heightPercentageToDP } from 'react-native-responsive-screen';
 import { CText } from '../../../../../../../../../../../../components/atoms/Ctext/index';
+import styleValues from '../../../../../../../../../../../../components/utils/enums/styleValues';
 import { Model } from '../Model';
 import { IText } from './../../../../../../../../../../../../components/atoms/Ctext/IText';
 
@@ -19,5 +20,5 @@ export default React.forwardRef(({ lbl, value }: { lbl: string; value: string },
 });
 const defStyle = StyleSheet.create({
   main: { flexDirection: 'row' },
-  txt: { flex: 1, textAlign: 'left' },
+  txt: { flex: 1, textAlign: 'left', paddingVertical: styleValues.paddin03 },
 });

@@ -1,7 +1,7 @@
 import React, { useImperativeHandle } from 'react';
 import { StyleSheet, View } from 'react-native';
 import ColorSystem from '../../../../../../../../../../configs/color/ColorSystem';
-import Item from './item';
+import mt, { labels } from '../../../../../../../../../../translation/lang/basics/ILangValuesEnum';
 import Tablet from './item/tablet';
 
 export default React.forwardRef(({}, ref) => {
@@ -11,7 +11,7 @@ export default React.forwardRef(({}, ref) => {
 
   return (
     <View style={defStyle.main}>
-      <Tablet model={{ address: 'address', name: 'name', phone: 'phone' }} noDel />
+      <Tablet model={{ address: mt(labels.address), name: mt(labels.Name), phone: mt(labels.phone) }} noDel />
     </View>
   );
 });

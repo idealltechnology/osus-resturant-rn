@@ -70,7 +70,6 @@ const defStyl = StyleSheet.create({
   main: {
     padding: styleValues.paddin01,
     flex: 1,
-    // borderWidth: 1,
   },
   input: {
     flex: 1,

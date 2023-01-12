@@ -10,7 +10,11 @@ import List from './parts/list';
 export default React.forwardRef(({}, ref) => {
   return (
     <View style={{ flex: 1 }}>
-      <List />
+      <Header />
+      <View style={defStyle.main}>
+        <List />
+      </View>
+      <Pager page={2} pages={5} />
     </View>
   );
 });
@@ -24,7 +28,6 @@ const defStyle = StyleSheet.create({
   main: {
     padding: styleValues.paddin01,
     flex: 1,
-    borderWidth: 1,
   },
   head: {
     flexDirection: 'row',

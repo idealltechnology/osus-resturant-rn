@@ -4,6 +4,7 @@ import CButton from '../../../../../../../components/molecules/CButton/CButton';
 import CModal from '../../../../../../../components/organisms/CModal';
 import styleValues from '../../../../../../../components/utils/enums/styleValues';
 import ColorSystem from '../../../../../../../configs/color/ColorSystem';
+import CommonStyles from '../../../../../../../configs/CommonStyles';
 import mt, { labels } from '../../../../../../../translation/lang/basics/ILangValuesEnum';
 import ArrayHelper from '../../../../../../../utilities/ArrayHelper';
 import { IFood } from '../../intefaces/IFood';
@@ -75,7 +76,6 @@ const defStyl = StyleSheet.create({
   main: {
     padding: styleValues.paddin01,
     flex: 1,
-    // borderWidth: 1,
   },
   additionalBtn: { flex: 2 },
   additionalTitle: { flex: 5 },
@@ -88,12 +88,7 @@ const defStyl = StyleSheet.create({
     flexWrap: 'wrap',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    // borderWidth: 1,
   },
 
-  foodItem: {
-    borderWidth: 1,
-    borderColor: ColorSystem.gray!(50),
-    borderRadius: styleValues.paddin01,
-  },
+  foodItem: CommonStyles.card,
 });

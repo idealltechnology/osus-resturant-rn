@@ -17,6 +17,11 @@ export default {
   paddin13: resizer(wp(16)),
   paddin14: resizer(wp(18)),
   paddin15: resizer(wp(20)),
+  paddin16: resizer(wp(22)),
+  paddin17: resizer(wp(24)),
+  paddin18: resizer(wp(26)),
+  paddin19: resizer(wp(28)),
+  paddin20: resizer(wp(30)),
 
   radius03: 3,
   radius05: 5,
